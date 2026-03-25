@@ -7,110 +7,80 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --gold:#C9A96E;--gold-light:#E8D5B0;
-  --dark:#0A0905;--dark2:#111009;--dark3:#1A1710;
-  --mid:#2A2418;--text:#D4C9B0;--muted:#7A7060;--white:#F0EBE0;
-  --f:'Oswald',sans-serif;
-}
+:root{--gold:#C9A96E;--gl:#E8D5B0;--dark:#0A0905;--d2:#111009;--d3:#1A1710;--mid:#2A2418;--text:#D4C9B0;--muted:#7A7060;--white:#F0EBE0;--f:'Oswald',sans-serif}
 html{scroll-behavior:smooth}
 body{background:var(--dark);color:var(--text);font-family:var(--f);font-weight:300;overflow-x:hidden}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,9,5,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--mid)}
-.nb{font-size:20px;font-weight:400;color:var(--gold-light);text-decoration:none;letter-spacing:.08em}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,9,5,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--mid)}
+.nb{font-size:18px;font-weight:400;color:var(--gl);text-decoration:none;letter-spacing:.08em}
 .nl{display:flex;gap:24px;align-items:center}
-.na{font-size:14px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.na{font-size:13px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .na:hover{color:var(--gold)}
 .lb{font-size:13px;font-weight:500;letter-spacing:.15em;background:none;border:1px solid var(--mid);color:var(--muted);padding:5px 14px;cursor:pointer;transition:all .2s;font-family:var(--f)}
 .lb:hover{border-color:var(--gold);color:var(--gold)}
 @media(max-width:600px){nav{padding:14px 20px}.na{display:none}}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(ellipse,rgba(201,169,110,.09) 0%,transparent 65%);pointer-events:none}
-.h-eye{font-size:14px;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-.h-t1{font-size:clamp(52px,9vw,110px);font-weight:300;letter-spacing:.04em;color:var(--white);line-height:.95;text-transform:uppercase}
-.h-t2{font-size:clamp(52px,9vw,110px);font-weight:500;letter-spacing:.04em;color:var(--gold-light);line-height:.95;text-transform:uppercase;margin-bottom:8px}
-.h-sub{font-size:clamp(16px,2vw,20px);font-weight:300;letter-spacing:.08em;color:var(--muted);margin:24px 0 40px;text-transform:uppercase}
+.h-eye{font-size:13px;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.h-t1{font-size:clamp(40px,7vw,80px);font-weight:300;letter-spacing:.06em;color:var(--white);line-height:.95;text-transform:uppercase}
+.h-t2{font-size:clamp(40px,7vw,80px);font-weight:500;letter-spacing:.06em;color:var(--gl);line-height:.95;text-transform:uppercase;margin-bottom:8px}
+.h-sub{font-size:clamp(15px,2vw,20px);font-weight:300;letter-spacing:.08em;color:var(--muted);margin:24px 0 40px;text-transform:uppercase}
 .h-rule{width:1px;height:52px;background:linear-gradient(to bottom,var(--gold),transparent);margin:0 auto 40px}
-.h-stmt{font-size:clamp(18px,3vw,28px);font-weight:300;line-height:1.6;max-width:700px;color:var(--white);letter-spacing:.04em}
-.h-stmt em{color:var(--gold-light);font-style:normal;font-weight:400}
+.h-stmt{font-size:clamp(18px,3vw,28px);font-weight:300;line-height:1.65;max-width:700px;color:var(--white);letter-spacing:.04em}
+.h-stmt em{color:var(--gl);font-style:normal;font-weight:400}
 .h-cta{margin-top:48px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-
-/* BUTTONS */
 .btn{display:inline-block;font-family:var(--f);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:14px 36px;transition:all .25s;cursor:pointer;border:none}
-.btn-s{background:var(--gold);color:var(--dark)}.btn-s:hover{background:var(--gold-light)}
+.btn-s{background:var(--gold);color:var(--dark)}.btn-s:hover{background:var(--gl)}
 .btn-o{background:transparent;color:var(--gold);border:1px solid var(--gold)}.btn-o:hover{background:rgba(201,169,110,.08)}
-
-/* STRUCTURE */
 .rule{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--mid),transparent)}
-.s{position:relative}
-.si{max-width:940px;margin:0 auto;padding:80px 24px}
-.sbg{background:var(--dark2)}
-.lbl{font-size:13px;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
-.ttl{font-size:clamp(28px,5vw,52px);font-weight:400;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:24px;line-height:1.1}
-.ttl em{color:var(--gold-light);font-style:normal}
+.s{position:relative}.si{max-width:940px;margin:0 auto;padding:80px 24px}.sbg{background:var(--d2)}
+.lbl{font-size:12px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
+.ttl{font-size:28px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:24px;line-height:1.3}
+.ttl em{color:var(--gl);font-style:normal}
 .body{font-size:20px;font-weight:300;line-height:1.8;color:var(--text);max-width:700px;letter-spacing:.02em}
-
-/* RECOGNITION */
 .rg{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:36px}
 @media(max-width:600px){.rg{grid-template-columns:1fr}}
-.ri{background:var(--dark3);padding:24px 28px;display:flex;gap:12px;transition:background .3s}
+.ri{background:var(--d3);padding:24px 28px;display:flex;gap:12px;transition:background .3s}
 .ri:hover{background:var(--mid)}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px}
 .rt{font-size:20px;font-weight:300;line-height:1.6;color:var(--text);letter-spacing:.02em}
-
-/* METHOD QUOTE */
 .mq{border-left:2px solid var(--gold);padding-left:28px;margin:40px 0}
-.mq p{font-size:20px;font-weight:300;line-height:1.8;color:var(--gold-light);letter-spacing:.03em}
-
-/* ELEMENTS */
+.mq p{font-size:20px;font-weight:300;line-height:1.8;color:var(--gl);letter-spacing:.03em}
 .els{display:grid;gap:2px;margin-top:40px}
-.el{display:grid;grid-template-columns:52px 1fr;background:var(--dark3);transition:background .3s}
+.el{display:grid;grid-template-columns:52px 1fr;background:var(--d3);transition:background .3s}
 .el:hover{background:var(--mid)}
 .el-n{display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:300;color:var(--gold);opacity:.4;border-right:1px solid var(--mid)}
 .el-b{padding:20px 24px}
-.el-nm{font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:6px}
-.el-d{font-size:18px;font-weight:300;line-height:1.7;color:var(--text);letter-spacing:.02em}
-
-/* NOT THIS */
+.el-nm{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gl);margin-bottom:6px}
+.el-d{font-size:18px;font-weight:300;line-height:1.75;color:var(--text);letter-spacing:.02em}
 .nt{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
 .ntag{font-size:18px;font-weight:300;letter-spacing:.06em;color:var(--muted);padding:6px 16px;border:1px solid var(--mid)}
-.ntag::before{content:'—';margin-right:6px;color:var(--gold)}
-
-/* FOUNDERS */
+.ntag::before{content:'--';margin-right:6px;color:var(--gold)}
 .fg{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:40px}
 @media(max-width:600px){.fg{grid-template-columns:1fr}}
-.fc{background:var(--dark3);padding:32px 28px}
-.frole{font-size:13px;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.fc{background:var(--d3);padding:32px 28px}
+.frole{font-size:12px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .fname{font-size:28px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:14px}
 .ftxt{font-size:18px;font-weight:300;line-height:1.8;color:var(--text);letter-spacing:.02em}
-
-/* PRODUCTS — 3 trust levels */
 .products{display:grid;gap:2px;margin-top:40px}
-.prod{background:var(--dark3);overflow:hidden;transition:background .3s}
-.prod:hover{background:var(--mid)}
+.prod{background:var(--d3);overflow:hidden}
 .prod-head{padding:28px 32px 0}
 .prod-tag{font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
 .prod-title{font-size:28px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:6px}
-.prod-price{font-size:20px;font-weight:300;color:var(--gold-light);letter-spacing:.06em;margin-bottom:16px}
-.prod-desc{font-size:20px;font-weight:300;line-height:1.8;color:var(--text);letter-spacing:.02em;max-width:680px;margin-bottom:20px}
+.prod-price{font-size:18px;font-weight:300;color:var(--gl);letter-spacing:.04em;margin-bottom:16px}
+.prod-desc{font-size:20px;font-weight:300;line-height:1.8;color:var(--text);letter-spacing:.02em;max-width:700px;margin-bottom:20px}
 .prod-list{list-style:none;margin-bottom:24px;padding:0 32px}
-.prod-list li{font-size:18px;font-weight:300;color:var(--muted);padding:5px 0;display:flex;align-items:flex-start;gap:10px;letter-spacing:.02em;border-bottom:1px solid rgba(42,36,24,.6)}
+.prod-list li{font-size:18px;font-weight:300;color:var(--muted);padding:6px 0;display:flex;align-items:flex-start;gap:10px;letter-spacing:.02em;border-bottom:1px solid rgba(42,36,24,.5)}
 .prod-list li:last-child{border-bottom:none}
 .prod-list li::before{content:'·';color:var(--gold);flex-shrink:0;font-size:20px;margin-top:-1px}
-.prod-reviews{background:rgba(0,0,0,.2);padding:20px 32px;border-top:1px solid var(--mid)}
-.stars{color:var(--gold);font-size:14px;letter-spacing:.1em;margin-bottom:10px}
-.rev-txt{font-size:18px;font-weight:300;line-height:1.7;color:var(--text);letter-spacing:.02em;margin-bottom:6px;font-style:italic}
-.rev-auth{font-size:13px;font-weight:400;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.prod-rev{background:rgba(0,0,0,.25);padding:20px 32px;border-top:1px solid var(--mid)}
+.stars{color:var(--gold);font-size:13px;letter-spacing:.1em;margin-bottom:10px}
+.rev-t{font-size:18px;font-weight:300;line-height:1.75;color:var(--text);letter-spacing:.02em;margin-bottom:8px;font-style:italic}
+.rev-a{font-size:13px;font-weight:400;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
 .rev-sep{height:1px;background:var(--mid);margin:16px 0}
-
-/* CAROUSEL */
 .cw{position:relative;margin-top:40px;overflow:hidden}
 .ct{display:flex;transition:transform .45s ease}
 .cs{min-width:100%;padding:0 2px}
-.rc{background:var(--dark3);padding:32px 36px}
+.rc{background:var(--d3);padding:32px 36px}
 .rc.feat{background:var(--mid);border-left:2px solid var(--gold)}
 .rsrc{font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .rtxt{font-size:20px;font-weight:300;line-height:1.8;color:var(--white);margin-bottom:18px;letter-spacing:.02em;font-style:italic}
@@ -121,31 +91,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:fl
 .cdots{display:flex;gap:7px}
 .cdot{width:5px;height:5px;border-radius:50%;background:var(--mid);cursor:pointer;transition:background .2s;border:none}
 .cdot.active{background:var(--gold)}
-.rlink{display:block;text-align:center;margin-top:24px;font-size:13px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--mid);padding-bottom:2px;width:fit-content;margin-left:auto;margin-right:auto;transition:color .2s,border-color .2s}
+.rlink{display:block;text-align:center;margin-top:24px;font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--mid);padding-bottom:2px;width:fit-content;margin-left:auto;margin-right:auto;transition:color .2s,border-color .2s}
 .rlink:hover{color:var(--gold);border-color:var(--gold)}
-
-/* TOURIST */
-.ti{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:700px){.ti{grid-template-columns:1fr;gap:24px}}
-.tq{border:1px solid var(--mid);padding:24px 28px}
-.tqt{font-size:20px;font-weight:300;color:var(--gold-light);line-height:1.7;margin-bottom:12px;letter-spacing:.02em;font-style:italic}
-.tqs{font-size:13px;font-weight:400;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
-
-/* ENTRY */
-.es{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:40px 0}
-@media(max-width:600px){.es{grid-template-columns:1fr}}
-.est{background:var(--dark3);padding:24px 20px}
-.en{font-size:44px;font-weight:300;color:var(--gold);opacity:.25;line-height:1;margin-bottom:12px}
-.et{font-size:20px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:8px}
-.ed{font-size:18px;font-weight:300;line-height:1.7;color:var(--muted);letter-spacing:.02em}
-
-/* ALL REVIEWS */
+.es{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin:40px 0}
+@media(max-width:700px){.es{grid-template-columns:1fr 1fr}}
+@media(max-width:400px){.es{grid-template-columns:1fr}}
+.est{background:var(--d3);padding:24px 20px}
+.en-num{font-size:44px;font-weight:300;color:var(--gold);opacity:.25;line-height:1;margin-bottom:12px}
+.et{font-size:18px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:8px}
+.ed{font-size:16px;font-weight:300;line-height:1.7;color:var(--muted);letter-spacing:.02em}
 .back-btn{background:none;border:none;color:var(--gold);font-size:14px;letter-spacing:.18em;cursor:pointer;font-family:var(--f);text-transform:uppercase;font-weight:400;margin-bottom:28px;display:flex;align-items:center;gap:8px}
-
-/* FOOTER */
 footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;text-align:center}
-.fb{font-size:24px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:6px}
-.fl{font-size:14px;font-weight:300;color:var(--muted);letter-spacing:.1em;margin-bottom:24px}
+.fb{font-size:22px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:6px}
+.fl{font-size:13px;font-weight:300;color:var(--muted);letter-spacing:.1em;margin-bottom:24px}
 .fls{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:28px}
 .fls a{font-size:13px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .fls a:hover{color:var(--gold)}
@@ -153,337 +111,155 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 </style>
 </head>
 <body>
-
 <nav>
   <a href="#" class="nb" onclick="showMain();return false">RESONANCE INTEGRATION</a>
   <div class="nl">
-    <a href="#method" class="na" data-ru="Метод" data-en="Method">Метод</a>
-    <a href="#formats" class="na" data-ru="Форматы" data-en="Sessions">Форматы</a>
-    <a href="#contact" class="na" data-ru="Контакт" data-en="Contact">Контакт</a>
-    <button class="lb" onclick="toggleLang()">EN</button>
+    <a href="#method" class="na" id="nav-method">Метод</a>
+    <a href="#formats" class="na" id="nav-formats">Форматы</a>
+    <a href="#contact" class="na" id="nav-contact">Контакт</a>
+    <button class="lb" onclick="toggleLang()" id="langbtn">EN</button>
   </div>
 </nav>
-
 <div id="main">
-
-<!-- HERO -->
 <section class="s hero">
-  <div class="h-eye" data-ru="Празереш · Мадейра · Португалия" data-en="Prazeres · Madeira · Portugal">Празереш · Мадейра · Португалия</div>
+  <div class="h-eye" id="h-eye">Празереш · Мадейра · Португалия</div>
   <div class="h-t1">Резонансная</div>
   <div class="h-t2">Интеграция</div>
-  <div class="h-sub" data-ru="Метод восстановления живой системы человека" data-en="Method for restoring the human living system">Метод восстановления живой системы человека</div>
+  <div class="h-sub" id="h-sub">Метод восстановления живой системы человека</div>
   <div class="h-rule"></div>
-  <p class="h-stmt">
-    <span data-ru="Мы не исправляем тело." data-en="We don't fix the body.">Мы не исправляем тело.</span><br>
-    <span data-ru="Мы создаём условие, в котором тело" data-en="We create a condition in which the body">Мы создаём условие, в котором тело</span><br>
-    <em><span data-ru="вспоминает, как быть здоровым" data-en="remembers how to be healthy">вспоминает, как быть здоровым</span></em><br>
-    <span data-ru="— и делает это само." data-en="— and does it itself.">— и делает это само.</span>
-  </p>
+  <p class="h-stmt" id="h-stmt">Мы не исправляем тело.<br>Мы создаём условие, в котором тело<br><em>вспоминает, как быть здоровым</em><br>— и делает это само</p>
   <div class="h-cta">
-    <a href="#contact" class="btn btn-s" data-ru="Записаться на встречу" data-en="Book a consultation">Записаться на встречу</a>
-    <a href="#method" class="btn btn-o" data-ru="О методе" data-en="About the method">О методе</a>
+    <a href="#contact" class="btn btn-s" id="btn-cta1">Записаться на встречу</a>
+    <a href="#method" class="btn btn-o" id="btn-cta2">О методе</a>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- RECOGNITION -->
 <section class="s sbg">
   <div class="si">
-    <span class="lbl" data-ru="Вы здесь, потому что" data-en="You're here because">Вы здесь, потому что</span>
-    <h2 class="ttl">Что-то не так — <em>и вы это знаете</em></h2>
-    <p class="body" data-ru="Вы уже пробовали. Врачи, массаж, упражнения — всё давало временное облегчение. Боль уходит и возвращается. Тело «починено», но внутри что-то не изменилось." data-en="You've already tried. Doctors, massage, exercises — all gave temporary relief. The pain leaves and returns. The body seems fixed, but inside something hasn't changed.">Вы уже пробовали. Врачи, массаж, упражнения — всё давало временное облегчение. Боль уходит и возвращается. Тело «починено», но внутри что-то не изменилось.</p>
+    <span class="lbl" id="s1-lbl">Вы здесь, потому что</span>
+    <h2 class="ttl" id="s1-ttl">Что-то не так — <em>и вы это знаете</em></h2>
+    <p class="body" id="s1-body">Вы уже пробовали. Врачи, массаж, упражнения — всё давало временное облегчение. Боль уходит и возвращается. Тело «починено», но внутри что-то не изменилось.</p>
     <div class="rg">
-      <div class="ri"><div class="dot"></div><div class="rt" data-ru="Хроническая скованность или боль, которая возвращается" data-en="Chronic stiffness or pain that keeps returning">Хроническая скованность или боль, которая возвращается</div></div>
-      <div class="ri"><div class="dot"></div><div class="rt" data-ru="Трудно «собрать себя» — тело не слушается" data-en="Hard to pull yourself together — the body doesn't respond">Трудно «собрать себя» — тело не слушается</div></div>
-      <div class="ri"><div class="dot"></div><div class="rt" data-ru="Энергия уходит к середине дня без причины" data-en="Energy drains by midday for no clear reason">Энергия уходит к середине дня без причины</div></div>
-      <div class="ri"><div class="dot"></div><div class="rt" data-ru="Тревожность и усталость, которые не проходят" data-en="Anxiety and fatigue that won't go away">Тревожность и усталость, которые не проходят</div></div>
+      <div class="ri"><div class="dot"></div><div class="rt" id="r1">Хроническая скованность или боль, которая возвращается</div></div>
+      <div class="ri"><div class="dot"></div><div class="rt" id="r2">Трудно «собрать себя» — тело не слушается</div></div>
+      <div class="ri"><div class="dot"></div><div class="rt" id="r3">Энергия уходит к середине дня без причины</div></div>
+      <div class="ri"><div class="dot"></div><div class="rt" id="r4">Тревожность и усталость, которые не проходят</div></div>
     </div>
-    <p style="margin-top:32px;font-size:20px;font-weight:300;color:var(--gold-light);letter-spacing:.04em" data-ru="Если вы узнали хотя бы одно — вы попали в нужное место." data-en="If you recognised even one — you're in the right place.">Если вы узнали хотя бы одно — вы попали в нужное место.</p>
+    <p style="margin-top:32px;font-size:20px;font-weight:300;color:var(--gl);letter-spacing:.04em" id="s1-end">Если вы узнали хотя бы одно — вы попали в нужное место</p>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- METHOD -->
 <section class="s" id="method">
   <div class="si">
-    <span class="lbl" data-ru="Откуда это пришло" data-en="How it began">Откуда это пришло</span>
-    <h2 class="ttl">Шесть лет практики.<br><em>Тысячи часов.</em> Один метод.</h2>
-    <p class="body" data-ru="Это не теория. Это выросло из совместной работы руками с живыми людьми. Один из нас чувствовал структуру тела — позвонки, фасции, суставы. Другая чувствовала состояние человека изнутри — то, что невозможно потрогать, но совершенно реально." data-en="This is not a theory. It grew from hands-on work with real people. One of us felt the body's structure — vertebrae, fascia, joints. The other felt the person's inner state — something you can't touch, but is completely real.">Это не теория. Это выросло из совместной работы руками с живыми людьми. Один из нас чувствовал структуру тела — позвонки, фасции, суставы. Другая чувствовала состояние человека изнутри — то, что невозможно потрогать, но совершенно реально.</p>
-    <div class="mq"><p data-ru="Однажды мы поняли: мы работаем с одним и тем же. Просто разными руками. С тех пор мы больше не разделяем физическое и энергетическое. Для нас это один процесс. Тело — единое. Человек — единый." data-en="One day we realised: we were working with the same thing. Just with different hands. Since then we no longer separate the physical and the energetic. For us it is one process. The body is whole. The person is whole.">Однажды мы поняли: мы работаем с одним и тем же. Просто разными руками. С тех пор мы больше не разделяем физическое и энергетическое. Для нас это один процесс. Тело — единое. Человек — единый.</p></div>
-    <span class="lbl" style="margin-top:52px" data-ru="Пять точек входа" data-en="Five points of entry">Пять точек входа</span>
-    <h3 class="ttl" style="font-size:clamp(22px,3vw,36px)">Один сеанс — <em>пять слоёв</em> воздействия</h3>
+    <span class="lbl" id="s2-lbl">Откуда это пришло</span>
+    <h2 class="ttl" id="s2-ttl">Шесть лет практики<br><em>Тысячи часов — Один метод</em></h2>
+    <p class="body" id="s2-body">Это не теория. Это выросло из совместной работы руками с живыми людьми. Один из нас чувствовал структуру тела — позвонки, фасции, суставы. Другая чувствовала состояние человека изнутри — то, что невозможно потрогать, но совершенно реально</p>
+    <div class="mq"><p id="s2-quote">Однажды мы поняли: мы работаем с одним и тем же. Просто разными руками. С тех пор мы больше не разделяем физическое и энергетическое. Для нас это один процесс. Тело — единое. Человек — единый</p></div>
+    <span class="lbl" style="margin-top:52px" id="s2-lbl2">Пять точек входа</span>
+    <h3 class="ttl" id="s2-ttl2">Один сеанс — <em>пять слоёв воздействия</em></h3>
     <div class="els">
-      <div class="el"><div class="el-n">I</div><div class="el-b"><div class="el-nm" data-ru="Настройка звуком · 432 Гц" data-en="Sound tuning · 432 Hz">Настройка звуком · 432 Гц</div><div class="el-d" data-ru="Музыка частоты 432 Гц снижает симпатическое возбуждение до того, как началась любая работа. Нервная система получает разрешение выйти из режима защиты — ещё до прикосновения." data-en="Music at 432 Hz reduces sympathetic arousal before any work begins. The nervous system receives permission to leave defence mode — before any touch.">Музыка частоты 432 Гц снижает симпатическое возбуждение до того, как началась любая работа. Нервная система получает разрешение выйти из режима защиты — ещё до прикосновения.</div></div></div>
-      <div class="el"><div class="el-n">II</div><div class="el-b"><div class="el-nm" data-ru="Камертон · Вибрация в руках" data-en="Tuning fork · Vibration through hands">Камертон · Вибрация в руках</div><div class="el-d" data-ru="Металлический камертон 432 Гц — прямой механический резонанс через кости, фасции, нервную систему. Тело настраивается на частоту сеанса. Как настройка инструмента перед концертом." data-en="A 432 Hz metal tuning fork transmits direct mechanical resonance through bones, fascia and the nervous system. The body tunes to the session frequency — like an instrument before a concert.">Металлический камертон 432 Гц — прямой механический резонанс через кости, фасции, нервную систему. Тело настраивается на частоту сеанса. Как настройка инструмента перед концертом.</div></div></div>
-      <div class="el"><div class="el-n">III</div><div class="el-b"><div class="el-nm" data-ru="Мануальная работа · Руки, которые слышат" data-en="Manual work · Hands that listen">Мануальная работа · Руки, которые слышат</div><div class="el-d" data-ru="Структурная диагностика и коррекция в уже подготовленном теле. Коррекция в состоянии готовности входит глубже и даёт более стойкий результат." data-en="Structural diagnosis and correction in an already prepared body. Correction in a state of readiness goes deeper and produces lasting results.">Структурная диагностика и коррекция в уже подготовленном теле. Коррекция в состоянии готовности входит глубже и даёт более стойкий результат.</div></div></div>
-      <div class="el"><div class="el-n">IV</div><div class="el-b"><div class="el-nm" data-ru="Энергетическая работа · Считывание поля" data-en="Energy work · Reading the field">Энергетическая работа · Считывание поля</div><div class="el-d" data-ru="Считывание состояния человека изнутри — где застряло, что держит, откуда тянется напряжение. Два канала восприятия создают полную картину и полное воздействие." data-en="Reading the person's inner state — where it's stuck, what holds it, where tension comes from. Two channels of perception create a complete picture and full impact.">Считывание состояния человека изнутри — где застряло, что держит, откуда тянется напряжение. Два канала восприятия создают полную картину и полное воздействие.</div></div></div>
-      <div class="el"><div class="el-n">V</div><div class="el-b"><div class="el-nm" data-ru="Вакуумная стимуляция · Открытие тканей" data-en="Vacuum stimulation · Opening the tissues">Вакуумная стимуляция · Открытие тканей</div><div class="el-d" data-ru="Вакуумные банки вдоль позвоночника запускают приток свежей крови и лимфодренаж. Ткани становятся живее и восприимчивее. Пациенты говорят: «стало легче дышать», «тяжесть ушла», «спина наконец отпустила»." data-en="Vacuum cups along the spine activate fresh blood flow and lymphatic drainage. Tissues become more alive and receptive. Patients say: 'breathing became easier', 'the heaviness lifted', 'my back finally let go'.">Вакуумные банки вдоль позвоночника запускают приток свежей крови и лимфодренаж. Ткани становятся живее и восприимчивее. Пациенты говорят: «стало легче дышать», «тяжесть ушла», «спина наконец отпустила».</div></div></div>
+      <div class="el"><div class="el-n">I</div><div class="el-b"><div class="el-nm" id="e1-nm">Настройка звуком · 432 Гц</div><div class="el-d" id="e1-d">Музыка частоты 432 Гц снижает симпатическое возбуждение до того, как началась любая работа. Нервная система получает разрешение выйти из режима защиты — ещё до прикосновения</div></div></div>
+      <div class="el"><div class="el-n">II</div><div class="el-b"><div class="el-nm" id="e2-nm">Камертон · Вибрация в руках</div><div class="el-d" id="e2-d">Металлический камертон 432 Гц — прямой механический резонанс через кости, фасции, нервную систему. Тело настраивается на частоту сеанса. Как настройка инструмента перед концертом</div></div></div>
+      <div class="el"><div class="el-n">III</div><div class="el-b"><div class="el-nm" id="e3-nm">Мануальная работа · Руки, которые слышат</div><div class="el-d" id="e3-d">Структурная диагностика и коррекция в уже подготовленном теле. Коррекция в состоянии готовности входит глубже и даёт более стойкий результат</div></div></div>
+      <div class="el"><div class="el-n">IV</div><div class="el-b"><div class="el-nm" id="e4-nm">Энергетическая работа · Считывание поля</div><div class="el-d" id="e4-d">Считывание состояния человека изнутри — где застряло, что держит, откуда тянется напряжение. Два канала восприятия создают полную картину и полное воздействие</div></div></div>
+      <div class="el"><div class="el-n">V</div><div class="el-b"><div class="el-nm" id="e5-nm">Вакуумная стимуляция · Открытие тканей</div><div class="el-d" id="e5-d">Вакуумные банки вдоль позвоночника запускают приток свежей крови и лимфодренаж. Ткани становятся живее и восприимчивее. Пациенты говорят: «стало легче дышать», «тяжесть ушла», «спина наконец отпустила»</div></div></div>
     </div>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- NOT THIS -->
 <section class="s sbg">
   <div class="si">
-    <span class="lbl" data-ru="Важно сказать честно" data-en="Important to say clearly">Важно сказать честно</span>
-    <h2 class="ttl">Чем метод <em>не является</em></h2>
-    <p class="body" data-ru="Каждое из этих слов несёт свою историю и свои ожидания. Мы не хотим, чтобы вы пришли с чужими представлениями." data-en="Each of these words carries its own history and expectations. We don't want you to arrive with someone else's assumptions.">Каждое из этих слов несёт свою историю и свои ожидания. Мы не хотим, чтобы вы пришли с чужими представлениями.</p>
+    <span class="lbl" id="s3-lbl">Важно сказать честно</span>
+    <h2 class="ttl" id="s3-ttl">Чем метод <em>не является</em></h2>
+    <p class="body" id="s3-body">Каждое из этих слов несёт свою историю и свои ожидания. Мы не хотим, чтобы вы пришли с чужими представлениями.</p>
     <div class="nt">
-      <div class="ntag" data-ru="Классическая хиропрактика" data-en="Classical chiropractic">Классическая хиропрактика</div>
-      <div class="ntag" data-ru="Рейки" data-en="Reiki">Рейки</div>
-      <div class="ntag" data-ru="Массаж" data-en="Massage">Массаж</div>
-      <div class="ntag" data-ru="Психотерапия" data-en="Psychotherapy">Психотерапия</div>
-      <div class="ntag" data-ru="Остеопатия" data-en="Osteopathy">Остеопатия</div>
-      <div class="ntag" data-ru="Звукотерапия" data-en="Sound therapy">Звукотерапия</div>
-      <div class="ntag" data-ru="Йога" data-en="Yoga">Йога</div>
-      <div class="ntag" data-ru="Физиотерапия" data-en="Physiotherapy">Физиотерапия</div>
+      <div class="ntag" id="nt1">Классическая хиропрактика</div><div class="ntag" id="nt2">Рейки</div><div class="ntag" id="nt3">Массаж</div><div class="ntag" id="nt4">Психотерапия</div><div class="ntag" id="nt5">Остеопатия</div><div class="ntag" id="nt6">Звукотерапия</div><div class="ntag" id="nt7">Йога</div><div class="ntag" id="nt8">Физиотерапия</div>
     </div>
-    <p style="margin-top:28px;font-size:20px;font-weight:300;line-height:1.8;color:var(--text);max-width:700px;letter-spacing:.02em" data-ru="Это собственный метод, выросший из шести лет совместной практики. Комплексный. Авторский. Где физическое, энергетическое и вибрационное воздействие неотделимы друг от друга." data-en="A proprietary method grown from six years of joint practice. Holistic. Original. Where physical, energetic and vibrational impact are inseparable from each other.">Это собственный метод, выросший из шести лет совместной практики. Комплексный. Авторский. Где физическое, энергетическое и вибрационное воздействие неотделимы друг от друга.</p>
+    <p style="margin-top:28px;font-size:20px;font-weight:300;line-height:1.8;color:var(--text);max-width:700px;letter-spacing:.02em" id="s3-end">Это собственный метод, выросший из шести лет совместной практики. Комплексный. Авторский. Где физическое, энергетическое и вибрационное воздействие неотделимы друг от друга</p>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- PLACE -->
 <section class="s">
   <div class="si" style="text-align:center">
-    <span class="lbl" style="display:block;text-align:center" data-ru="Пространство как часть метода" data-en="The space as part of the method">Пространство как часть метода</span>
-    <p style="font-size:clamp(24px,4vw,40px);font-weight:300;line-height:1.5;color:var(--white);text-align:center;max-width:700px;margin:0 auto 32px;letter-spacing:.04em" data-ru="«Наш дом стоит в тихом месте на острове Мадейра. Среда — это первый шаг метода.»" data-en="'Our home stands in a quiet place on the island of Madeira. The environment is the first step of the method.'">«Наш дом стоит в тихом месте на острове Мадейра. Среда — это первый шаг метода.»</p>
-    <p style="text-align:center;font-size:14px;font-weight:300;color:var(--muted);letter-spacing:.15em;text-transform:uppercase">Caminho Lombo dos Barros, 21 · Празереш, 9370-619 · Мадейра, Португалия</p>
+    <span class="lbl" style="display:block;text-align:center" id="s4-lbl">Пространство как часть метода</span>
+    <p style="font-size:clamp(24px,4vw,40px);font-weight:300;line-height:1.5;color:var(--white);text-align:center;max-width:700px;margin:0 auto 32px;letter-spacing:.04em" id="s4-quote">«Наш дом стоит в тихом месте на острове Мадейра. Среда — это первый шаг метода.»</p>
+    <p style="text-align:center;font-size:13px;font-weight:300;color:var(--muted);letter-spacing:.15em;text-transform:uppercase">Caminho Lombo dos Barros, 21 · Празереш, 9370-619 · Мадейра, Португалия</p>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- FOUNDERS -->
 <section class="s sbg">
   <div class="si">
-    <span class="lbl" data-ru="Кто за этим стоит" data-en="Who stands behind this">Кто за этим стоит</span>
-    <h2 class="ttl">Два человека.<br><em>Один метод.</em></h2>
+    <span class="lbl" id="s5-lbl">Кто за этим стоит</span>
+    <h2 class="ttl" id="s5-ttl">Два человека <em>Один метод</em></h2>
     <div class="fg">
-      <div class="fc">
-        <div class="frole" data-ru="Хиропрактик · Структурная работа" data-en="Chiropractor · Structural work">Хиропрактик · Структурная работа</div>
-        <div class="fname">Марк Вдовских</div>
-        <div class="ftxt" data-ru="30 лет практики. Традиционные китайские техники, опыт Центральной Азии, индивидуальная коррекция биомеханики. Руки, которые слышат структуру тела — позвонки, фасции, напряжение тканей — прежде чем это видит глаз." data-en="30 years of practice. Traditional Chinese techniques, Central Asian experience, individual biomechanical correction. Hands that hear the body's structure — vertebrae, fascia, tissue tension — before the eye sees it.">30 лет практики. Традиционные китайские техники, опыт Центральной Азии, индивидуальная коррекция биомеханики. Руки, которые слышат структуру тела — позвонки, фасции, напряжение тканей — прежде чем это видит глаз.</div>
-      </div>
-      <div class="fc">
-        <div class="frole" data-ru="Работа с состоянием · Поле · Пространство" data-en="State work · Field · Space">Работа с состоянием · Поле · Пространство</div>
-        <div class="fname">Ольга Вдовских</div>
-        <div class="ftxt" data-ru="Практик энергетической работы и дизайнер пространства. Чувствует состояние человека изнутри — то, что невозможно потрогать, но совершенно реально. Создаёт условие, в котором тело может снова почувствовать себя дома в своей частоте." data-en="Energy practitioner and space designer. Feels the person's inner state — something you can't touch, but is completely real. Creates a condition in which the body can feel at home in its own frequency again.">Практик энергетической работы и дизайнер пространства. Чувствует состояние человека изнутри — то, что невозможно потрогать, но совершенно реально. Создаёт условие, в котором тело может снова почувствовать себя дома в своей частоте.</div>
-      </div>
+      <div class="fc"><div class="frole" id="f1-role">Хиропрактик · Структурная работа</div><div class="fname" id="f1-name">Марк Вдовских</div><div class="ftxt" id="f1-txt">30 лет практики. Традиционные китайские техники, опыт Центральной Азии, индивидуальная коррекция биомеханики. Руки, которые слышат структуру тела — позвонки, фасции, напряжение тканей — прежде чем это видит глаз</div></div>
+      <div class="fc"><div class="frole" id="f2-role">Работа с состоянием · Поле · Пространство</div><div class="fname" id="f2-name">Ольга Вдовских</div><div class="ftxt" id="f2-txt">Практик энергетической работы и архитектор пространства. Чувствует состояние человека изнутри — то, что невозможно потрогать, но совершенно реально. Создаёт условие, в котором тело может снова почувствовать себя дома в своей частоте</div></div>
     </div>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- FORMATS — 5 products with 3 trust levels -->
 <section class="s" id="formats">
   <div class="si">
-    <span class="lbl" data-ru="Как работать с нами" data-en="How to work with us">Как работать с нами</span>
-    <h2 class="ttl">Форматы <em>работы</em></h2>
-
+    <span class="lbl" id="s6-lbl">Как работать с нами</span>
+    <h2 class="ttl" id="s6-ttl">Форматы <em>работы</em></h2>
     <div class="products">
-
-      <!-- 1. ONLINE CONSULT -->
-      <div class="prod">
-        <div class="prod-head">
-          <span class="prod-tag" data-ru="Первое касание" data-en="First contact">Первое касание</span>
-          <div class="prod-title" data-ru="Онлайн-консультация" data-en="Online consultation">Онлайн-консультация</div>
-          <div class="prod-price">35 € · <span data-ru="30–40 минут · видеозвонок" data-en="30–40 minutes · video call">30–40 минут · видеозвонок</span></div>
-          <p class="prod-desc" data-ru="Иногда перед тем, как куда-то прийти, нужно просто поговорить. Вы рассказываете о своём состоянии — мы слушаем. Не только симптомы, но и то, как давно это началось, что уже пробовали. По итогу вы понимаете: подходит ли вам наш метод и с чего имеет смысл начать." data-en="Sometimes before going somewhere you just need to talk. You tell us about your condition — we listen. Not just the symptoms, but how long it's been, what you've tried. By the end you'll know whether our method is right for you and where to start.">Иногда перед тем, как куда-то прийти, нужно просто поговорить. Вы рассказываете о своём состоянии — мы слушаем. Не только симптомы, но и то, как давно это началось, что уже пробовали. По итогу вы понимаете: подходит ли вам наш метод и с чего имеет смысл начать.</p>
-        </div>
-        <ul class="prod-list">
-          <li data-ru="Это не продающий звонок. Это разговор двух людей, один из которых разбирается в теле." data-en="This is not a sales call. It's a conversation between two people, one of whom understands the body.">Это не продающий звонок. Это разговор двух людей, один из которых разбирается в теле.</li>
-          <li data-ru="Разбор вашей ситуации — без шаблонных ответов" data-en="Analysis of your situation — no template answers">Разбор вашей ситуации — без шаблонных ответов</li>
-          <li data-ru="Ясность: что происходит и что с этим можно сделать" data-en="Clarity: what is happening and what can be done">Ясность: что происходит и что с этим можно сделать</li>
-          <li data-ru="Рекомендация: нужен ли вам курс или достаточно одного приёма" data-en="Recommendation: whether you need a course or one session is enough">Рекомендация: нужен ли вам курс или достаточно одного приёма</li>
-        </ul>
-        <div class="prod-reviews">
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Доктор подробно объясняет, что делает и почему, даёт грамотные советы по профилактике. Каждый приём проходит спокойно, внимательно и эффективно.»" data-en="'The doctor explains in detail what he does and why, gives sound prevention advice. Every appointment is calm, attentive and effective.'">«Доктор подробно объясняет, что делает и почему, даёт грамотные советы по профилактике. Каждый приём проходит спокойно, внимательно и эффективно.»</div>
-          <div class="rev-auth">— Daria Butova, Google Maps</div>
-        </div>
-      </div>
-
-      <!-- 2. FIRST SESSION -->
-      <div class="prod">
-        <div class="prod-head">
-          <span class="prod-tag" data-ru="Первый шаг" data-en="First step">Первый шаг</span>
-          <div class="prod-title" data-ru="Первичный приём" data-en="Initial session">Первичный приём</div>
-          <div class="prod-price">117 € · <span data-ru="очный · повторная сессия при необходимости — 117 €" data-en="in-person · repeat session if needed — 117 €">очный · повторная сессия при необходимости — 117 €</span></div>
-          <p class="prod-desc" data-ru="Это встреча, с которой всё начинается. Ещё в дверях что-то меняется. Тихое место, без спешки, без очереди. Нервная система начинает успокаиваться ещё до того, как мы что-то сделали. Это уже начало процесса. После приёма тело продолжает меняться ещё несколько дней. Большинство людей замечают это уже на следующее утро." data-en="This is the meeting where everything begins. Something changes even in the doorway. A quiet place, no rush, no queue. The nervous system begins to calm before we've done anything. That's already the beginning of the process. After the session, the body continues to change for several days. Most people notice it the very next morning.">Это встреча, с которой всё начинается. Ещё в дверях что-то меняется. Тихое место, без спешки, без очереди. Нервная система начинает успокаиваться ещё до того, как мы что-то сделали. Это уже начало процесса. После приёма тело продолжает меняться ещё несколько дней. Большинство людей замечают это уже на следующее утро.</p>
-        </div>
-        <ul class="prod-list">
-          <li data-ru="Структурная диагностика и мануальная коррекция" data-en="Structural diagnosis and manual correction">Структурная диагностика и мануальная коррекция</li>
-          <li data-ru="Снятие острой или хронической боли" data-en="Relief of acute or chronic pain">Снятие острой или хронической боли</li>
-          <li data-ru="Запуск собственного процесса восстановления" data-en="Triggering the body's own recovery process">Запуск собственного процесса восстановления</li>
-          <li data-ru="Звуковое сопровождение 432 Гц на всей сессии" data-en="432 Hz sound accompaniment throughout the session">Звуковое сопровождение 432 Гц на всей сессии</li>
-        </ul>
-        <div class="prod-reviews">
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«После его сеансов сразу стало легче, чувствуется рука мастера. Более того — у него есть медицинское образование, в отличии от других специалистов на острове.»" data-en="'After his sessions it immediately became easier, you can feel a master's hands. What's more — he has medical training, unlike other specialists on the island.'">«После его сеансов сразу стало легче, чувствуется рука мастера. Более того — у него есть медицинское образование, в отличии от других специалистов на острове.»</div>
-          <div class="rev-auth">— Екатерина Бойко, Google Maps</div>
-          <div class="rev-sep"></div>
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Первый раз я пришла к ним в очень плохом эмоциональном состоянии, и казалось, что тело вообще не моё. После одной сессии столько всего исцелилось. Вторая сессия — это тонкая настройка.»" data-en="'The first time I came to them I was in a very poor emotional state, and it felt like my body wasn't even mine. After one session so much was healed. The second session was a fine-tuning.'">«Первый раз я пришла к ним в очень плохом эмоциональном состоянии, и казалось, что тело вообще не моё. После одной сессии столько всего исцелилось. Вторая сессия — это тонкая настройка.»</div>
-          <div class="rev-auth">— Tatiana, Google Maps</div>
-        </div>
-      </div>
-
-      <!-- 3. RECOVERY PROGRAMME -->
-      <div class="prod">
-        <div class="prod-head">
-          <span class="prod-tag" data-ru="Основной формат" data-en="Core format">Основной формат</span>
-          <div class="prod-title" data-ru="Программа восстановления" data-en="Recovery programme">Программа восстановления</div>
-          <div class="prod-price">420 € · <span data-ru="4–5 сессий · полный протокол метода" data-en="4–5 sessions · full method protocol">4–5 сессий · полный протокол метода</span></div>
-          <p class="prod-desc" data-ru="Первая сессия показывает эффект. Программа закрепляет его и возвращает тело в согласованное состояние. Это не набор процедур, применяемых одна за другой. Каждая встреча — следующий слой работы с одной и той же системой. Между сессиями тело продолжает меняться само — мы лишь направляем этот процесс точнее с каждым разом." data-en="The first session shows the effect. The programme consolidates it and returns the body to a coherent state. This is not a set of procedures applied one after another. Each meeting is the next layer of work with the same system. Between sessions the body continues to change on its own — we simply guide the process more precisely each time.">Первая сессия показывает эффект. Программа закрепляет его и возвращает тело в согласованное состояние. Это не набор процедур, применяемых одна за другой. Каждая встреча — следующий слой работы с одной и той же системой. Между сессиями тело продолжает меняться само — мы лишь направляем этот процесс точнее с каждым разом.</p>
-        </div>
-        <ul class="prod-list">
-          <li data-ru="Сессия 1 — диагностика, первичная коррекция, запуск процесса" data-en="Session 1 — diagnosis, initial correction, starting the process">Сессия 1 — диагностика, первичная коррекция, запуск процесса</li>
-          <li data-ru="Сессии 2–3 — углублённая работа со структурой и состоянием" data-en="Sessions 2–3 — deeper work with structure and state">Сессии 2–3 — углублённая работа со структурой и состоянием</li>
-          <li data-ru="Сессия 4 — вакуумно-градиентная терапия + мануальная работа" data-en="Session 4 — vacuum-gradient therapy + manual work">Сессия 4 — вакуумно-градиентная терапия + мануальная работа</li>
-          <li data-ru="Сессия 5 — тонкая настройка, фиксация результата" data-en="Session 5 — fine-tuning, consolidating the result">Сессия 5 — тонкая настройка, фиксация результата</li>
-          <li data-ru="Звук 432 Гц и камертон — на каждой сессии" data-en="432 Hz sound and tuning fork — at every session">Звук 432 Гц и камертон — на каждой сессии</li>
-        </ul>
-        <div class="prod-reviews">
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Он настраивает тело как музыкальный инструмент — тонко и мягко, но корректируя на очень глубоком уровне. После посещения — ощущение, что тело подогнали к новой реальности. Всё встало на свои места.»" data-en="'He tunes the body like a musical instrument — subtly and gently, but correcting on a very deep level. After visiting — the feeling that the body has been adjusted to a new reality. Everything fell into place.'">«Он настраивает тело как музыкальный инструмент — тонко и мягко, но корректируя на очень глубоком уровне. После посещения — ощущение, что тело подогнали к новой реальности. Всё встало на свои места.»</div>
-          <div class="rev-auth">— nastasia_nature_therapy, Instagram · Прасереш, Мадейра</div>
-          <div class="rev-sep"></div>
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Вся моя семья — его клиенты. Мы приходим к Марку когда совсем разваливаемся. Он знает, что не так, и умеет собрать всё обратно.»" data-en="'All my family are his clients. We come to Mark when we're completely falling apart. He knows what's wrong and knows how to put everything back together.'">«Вся моя семья — его клиенты. Мы приходим к Марку когда совсем разваливаемся. Он знает, что не так, и умеет собрать всё обратно.»</div>
-          <div class="rev-auth">— Evgenia Zahra, Google Maps</div>
-          <div class="rev-sep"></div>
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Месяц спустя я чувствую себя совершенно другим человеком в своём теле — оно снова моё. Я тренируюсь и наконец вижу результаты.»" data-en="'A month later I feel like a completely different person in my body — it's mine again. I'm training and finally seeing results.'">«Месяц спустя я чувствую себя совершенно другим человеком в своём теле — оно снова моё. Я тренируюсь и наконец вижу результаты.»</div>
-          <div class="rev-auth">— Tatiana, Google Maps</div>
-        </div>
-      </div>
-
-      <!-- 4. SUBSCRIPTION -->
-      <div class="prod">
-        <div class="prod-head">
-          <span class="prod-tag" data-ru="Долгосрочная поддержка" data-en="Long-term support">Долгосрочная поддержка</span>
-          <div class="prod-title" data-ru="Абонемент сопровождения" data-en="Ongoing support">Абонемент сопровождения</div>
-          <div class="prod-price"><span data-ru="3 месяца · 432 € (скидка 10%) | 6 месяцев · 816 € (скидка 15%)" data-en="3 months · 432 € (10% off) | 6 months · 816 € (15% off)">3 месяца · 432 € (скидка 10%) &nbsp;|&nbsp; 6 месяцев · 816 € (скидка 15%)</span></div>
-          <p class="prod-desc" data-ru="После программы тело знает, как быть в порядке. Абонемент — это не лечение. Это разговор с телом, который не прерывается. Раз в месяц — очная сессия. Мы смотрим, как тело держит результат, где начинает накапливаться напряжение раньше, чем оно становится болью." data-en="After the programme the body knows how to be well. The subscription is not treatment. It's a conversation with the body that doesn't stop. Once a month — an in-person session. We check how the body holds the result, where tension is beginning to accumulate before it becomes pain.">После программы тело знает, как быть в порядке. Абонемент — это не лечение. Это разговор с телом, который не прерывается. Раз в месяц — очная сессия. Мы смотрим, как тело держит результат, где начинает накапливаться напряжение раньше, чем оно становится болью.</p>
-        </div>
-        <ul class="prod-list">
-          <li data-ru="1 очная сессия в месяц" data-en="1 in-person session per month">1 очная сессия в месяц</li>
-          <li data-ru="Онлайн-разборы между встречами — по необходимости" data-en="Online check-ins between sessions — as needed">Онлайн-разборы между встречами — по необходимости</li>
-          <li data-ru="Приоритетная запись" data-en="Priority booking">Приоритетная запись</li>
-          <li data-ru="Абонемент открыт для тех, кто уже прошёл первичный приём или программу" data-en="Available to those who have already completed an initial session or programme">Абонемент открыт для тех, кто уже прошёл первичный приём или программу</li>
-        </ul>
-        <div class="prod-reviews">
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Познакомился с доктором Марком несколько лет назад — и с тех пор регулярно обращаюсь. Это не просто хороший хиропрактик, а настоящий профессионал, который искренне заботится о своих пациентах.»" data-en="'I met Dr. Mark several years ago and have been coming regularly ever since. He's not just a good chiropractor — he's a true professional who genuinely cares about his patients.'">«Познакомился с доктором Марком несколько лет назад — и с тех пор регулярно обращаюсь. Это не просто хороший хиропрактик, а настоящий профессионал, который искренне заботится о своих пациентах.»</div>
-          <div class="rev-auth">— Daria Butova, Google Maps</div>
-          <div class="rev-sep"></div>
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Волшебники! Очень рада знакомству с людьми, которые и Мастера высокого качества, и люди с высокой энергетикой, и большими сердцами. В наше время очень мало таких людей и специалистов.»" data-en="'Wizards! So glad to meet people who are both high-quality masters and people with powerful energy and big hearts. There are very few such people and specialists nowadays.'">«Волшебники! Очень рада знакомству с людьми, которые и Мастера высокого качества, и люди с высокой энергетикой, и большими сердцами. В наше время очень мало таких людей и специалистов.»</div>
-          <div class="rev-auth">— Svetlana Lappa, Google Maps</div>
-        </div>
-      </div>
-
-      <!-- 5. MEDICAL TOURISM -->
-      <div class="prod">
-        <div class="prod-head">
-          <span class="prod-tag" data-ru="Медицинский туризм" data-en="Medical tourism">Медицинский туризм</span>
-          <div class="prod-title" data-ru="Приехать на Мадейру — и восстановиться" data-en="Come to Madeira — and recover">Приехать на Мадейру — и восстановиться</div>
-          <div class="prod-price">420 € · <span data-ru="программа 4–5 сессий · 100% предоплата · запись на даты" data-en="4–5 session programme · 100% prepayment · booking by dates">программа 4–5 сессий · 100% предоплата · запись на даты</span></div>
-          <p class="prod-desc" data-ru="Мадейра — остров, на котором тело само начинает выдыхать. Левады, океан, горы, воздух. И если вы уже едете сюда — имеет смысл дать телу больше, чем просто отдых. Мы работаем с теми, кто приезжает целенаправленно: заложить восстановление в маршрут поездки, пройти полный протокол за 10–15 дней, уехать иначе, чем приехал." data-en="Madeira is an island where the body starts to breathe on its own. Levadas, ocean, mountains, air. And if you're already coming here — it makes sense to give your body more than just rest. We work with those who come with a purpose: to build recovery into their travel itinerary, complete the full protocol in 10–15 days, and leave differently than they arrived.">Мадейра — остров, на котором тело само начинает выдыхать. Левады, океан, горы, воздух. И если вы уже едете сюда — имеет смысл дать телу больше, чем просто отдых. Мы работаем с теми, кто приезжает целенаправленно: заложить восстановление в маршрут поездки, пройти полный протокол за 10–15 дней, уехать иначе, чем приехал.</p>
-        </div>
-        <ul class="prod-list">
-          <li data-ru="Полная программа восстановления — 4–5 сессий" data-en="Full recovery programme — 4–5 sessions">Полная программа восстановления — 4–5 сессий</li>
-          <li data-ru="Все пять элементов метода, включая вакуумную терапию" data-en="All five elements of the method, including vacuum therapy">Все пять элементов метода, включая вакуумную терапию</li>
-          <li data-ru="Работа на русском, English, Português" data-en="Sessions in Russian, English, Portuguese">Работа на русском, English, Português</li>
-          <li data-ru="Запись на даты — бронирование с предоплатой" data-en="Booking by dates — reservation with prepayment">Запись на даты — бронирование с предоплатой</li>
-        </ul>
-        <div class="prod-reviews">
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Помимо красивых закатов в Прасереше есть ещё одна причина туда поехать. Это доктор Марк. Нам повезло, что на острове есть специалист такого уровня. Сейчас чувствую — всё сбалансировано. Движение ускорилось.»" data-en="'Besides the beautiful sunsets in Prazeres there is another reason to go there. That's Dr. Mark. We are lucky to have a specialist of this level on the island. Now I feel — everything is balanced. Movement has accelerated.'">«Помимо красивых закатов в Прасереше есть ещё одна причина туда поехать. Это доктор Марк. Нам повезло, что на острове есть специалист такого уровня. Сейчас чувствую — всё сбалансировано. Движение ускорилось.»</div>
-          <div class="rev-auth">— nastasia_nature_therapy, Instagram · Прасереш, Мадейра</div>
-          <div class="rev-sep"></div>
-          <div class="stars">★★★★★</div>
-          <div class="rev-txt" data-ru="«Если вы на Мадейре и хотите улучшить своё здоровье — идите к доктору Марку. Индивидуальный подход, никогда не отпустит, пока не решит проблему. Рекомендую от всего сердца.»" data-en="'If you're in Madeira and want to improve your health — go to Dr. Mark. Individual approach, he never lets go until he solves the problem. I recommend wholeheartedly.'">«Если вы на Мадейре и хотите улучшить своё здоровье — идите к доктору Марку. Индивидуальный подход, никогда не отпустит, пока не решит проблему. Рекомендую от всего сердца.»</div>
-          <div class="rev-auth">— Olesia Zelikova, Google Maps</div>
-        </div>
-      </div>
-
+      <div class="prod"><div class="prod-head"><span class="prod-tag" id="p1-tag">Первое касание</span><div class="prod-title" id="p1-title">Онлайн-консультация</div><div class="prod-price" id="p1-price">35 € · 30–40 минут · видеозвонок</div><p class="prod-desc" id="p1-desc">Иногда перед тем, как куда-то прийти, нужно просто поговорить. Вы рассказываете о своём состоянии — мы слушаем. Не только симптомы, но и то, как давно это началось, что уже пробовали. По итогу вы понимаете: подходит ли вам наш метод и с чего имеет смысл начать</p></div><ul class="prod-list" id="p1-list"><li>Это не продающий звонок. Это разговор двух людей, один из которых разбирается в теле.</li><li>Разбор вашей ситуации — без шаблонных ответов</li><li>Ясность: что происходит и что с этим можно сделать</li><li>Рекомендация: нужен ли вам курс или достаточно одного приёма</li></ul><div class="prod-rev"><div class="stars">★★★★★</div><div class="rev-t" id="p1-r1">«Доктор подробно объясняет, что делает и почему, даёт грамотные советы по профилактике. Каждый приём проходит спокойно, внимательно и эффективно.»</div><div class="rev-a">— Daria Butova, Google Maps</div></div></div>
+      <div class="prod"><div class="prod-head"><span class="prod-tag" id="p2-tag">Первый шаг</span><div class="prod-title" id="p2-title">Первичный приём</div><div class="prod-price" id="p2-price">117 € · очный · повторная сессия при необходимости — 117 €</div><p class="prod-desc" id="p2-desc">Это встреча, с которой всё начинается. Ещё в дверях что-то меняется. Тихое место, без спешки, без очереди. Нервная система начинает успокаиваться ещё до того, как мы что-то сделали. Это уже начало процесса. После приёма тело продолжает меняться ещё несколько дней. Большинство людей замечают это уже на следующее утро</p></div><ul class="prod-list" id="p2-list"><li>Структурная диагностика и мануальная коррекция</li><li>Снятие острой или хронической боли</li><li>Запуск собственного процесса восстановления</li><li>Звуковое сопровождение 432 Гц на всей сессии</li></ul><div class="prod-rev"><div class="stars">★★★★★</div><div class="rev-t" id="p2-r1">«После его сеансов сразу стало легче, чувствуется рука мастера. Более того — у него есть медицинское образование, в отличии от других специалистов на острове.»</div><div class="rev-a">— Екатерина Бойко, Google Maps</div><div class="rev-sep"></div><div class="stars">★★★★★</div><div class="rev-t" id="p2-r2">«Первый раз я пришла к ним в очень плохом эмоциональном состоянии, и казалось, что тело вообще не моё. После одной сессии столько всего исцелилось. Вторая сессия — это тонкая настройка.»</div><div class="rev-a">— Tatiana, Google Maps</div></div></div>
+      <div class="prod"><div class="prod-head"><span class="prod-tag" id="p3-tag">Основной формат</span><div class="prod-title" id="p3-title">Программа восстановления</div><div class="prod-price" id="p3-price">420 € · 4–5 сессий · полный протокол метода</div><p class="prod-desc" id="p3-desc">Первая сессия показывает эффект. Программа закрепляет его и возвращает тело в согласованное состояние. Это не набор процедур, применяемых одна за другой. Каждая встреча — следующий слой работы с одной и той же системой. Между сессиями тело продолжает меняться само — мы лишь направляем этот процесс точнее с каждым разом</p></div><ul class="prod-list" id="p3-list"><li>Сессия 1 — диагностика, первичная коррекция, запуск процесса</li><li>Сессии 2–3 — углублённая работа со структурой и состоянием</li><li>Сессия 4 — вакуумно-градиентная терапия + мануальная работа</li><li>Сессия 5 — тонкая настройка, фиксация результата</li><li>Звук 432 Гц и камертон — на каждой сессии</li></ul><div class="prod-rev"><div class="stars">★★★★★</div><div class="rev-t" id="p3-r1">«Он настраивает тело как музыкальный инструмент — тонко и мягко, но корректируя на очень глубоком уровне. После посещения — ощущение, что тело подогнали к новой реальности. Всё встало на свои места.»</div><div class="rev-a">— nastasia_nature_therapy, Instagram · Прасереш, Мадейра</div><div class="rev-sep"></div><div class="stars">★★★★★</div><div class="rev-t" id="p3-r2">«Вся моя семья — его клиенты. Мы приходим к Марку когда совсем разваливаемся. Он знает, что не так, и умеет собрать всё обратно.»</div><div class="rev-a">— Evgenia Zahra, Google Maps</div><div class="rev-sep"></div><div class="stars">★★★★★</div><div class="rev-t" id="p3-r3">«Месяц спустя я чувствую себя совершенно другим человеком в своём теле — оно снова моё. Я тренируюсь и наконец вижу результаты.»</div><div class="rev-a">— Tatiana, Google Maps</div></div></div>
+      <div class="prod"><div class="prod-head"><span class="prod-tag" id="p4-tag">Долгосрочная поддержка</span><div class="prod-title" id="p4-title">Абонемент сопровождения</div><div class="prod-price" id="p4-price">3 месяца · 432 € (скидка 10%) | 6 месяцев · 816 € (скидка 15%)</div><p class="prod-desc" id="p4-desc">После программы тело знает, как быть в порядке. Абонемент — это не лечение. Это разговор с телом, который не прерывается. Раз в месяц — очная сессия. Мы смотрим, как тело держит результат, где начинает накапливаться напряжение раньше, чем оно становится болью</p></div><ul class="prod-list" id="p4-list"><li>1 очная сессия в месяц</li><li>Онлайн-разборы между встречами — по необходимости</li><li>Приоритетная запись</li><li>Абонемент открыт для тех, кто уже прошёл первичный приём или программу</li></ul><div class="prod-rev"><div class="stars">★★★★★</div><div class="rev-t" id="p4-r1">«Познакомился с доктором Марком несколько лет назад — и с тех пор регулярно обращаюсь. Это не просто хороший хиропрактик, а настоящий профессионал, который искренне заботится о своих пациентах.»</div><div class="rev-a">— Daria Butova, Google Maps</div><div class="rev-sep"></div><div class="stars">★★★★★</div><div class="rev-t" id="p4-r2">«Волшебники! Очень рада знакомству с людьми, которые и Мастера высокого качества, и люди с высокой энергетикой, и большими сердцами. В наше время очень мало таких людей и специалистов.»</div><div class="rev-a">— Svetlana Lappa, Google Maps</div></div></div>
+      <div class="prod"><div class="prod-head"><span class="prod-tag" id="p5-tag">Медицинский туризм</span><div class="prod-title" id="p5-title">Приехать на Мадейру — и восстановиться</div><div class="prod-price" id="p5-price">420 € · программа 4–5 сессий · 100% предоплата · запись на даты</div><p class="prod-desc" id="p5-desc">Мадейра — остров, на котором тело само начинает выдыхать. Левады, океан, горы, воздух. И если вы уже едете сюда — имеет смысл дать телу больше, чем просто отдых. Мы работаем с теми, кто приезжает целенаправленно: заложить восстановление в маршрут поездки, пройти полный протокол за 10–15 дней, уехать иначе, чем приехал.</p></div><ul class="prod-list" id="p5-list"><li>Полная программа восстановления — 4–5 сессий</li><li>Все пять элементов метода, включая вакуумную терапию</li><li>Работа на русском, English, Português</li><li>Запись на даты — бронирование с предоплатой</li></ul><div class="prod-rev"><div class="stars">★★★★★</div><div class="rev-t" id="p5-r1">«Помимо красивых закатов в Прасереше есть ещё одна причина туда поехать. Это доктор Марк. Нам повезло, что на острове есть специалист такого уровня. Сейчас чувствую — всё сбалансировано. Движение ускорилось.»</div><div class="rev-a">— nastasia_nature_therapy, Instagram · Прасереш, Мадейра</div><div class="rev-sep"></div><div class="stars">★★★★★</div><div class="rev-t" id="p5-r2">«Если вы на Мадейре и хотите улучшить своё здоровье — идите к доктору Марку. Индивидуальный подход, никогда не отпустит, пока не решит проблему. Рекомендую от всего сердца.»</div><div class="rev-a">— Olesia Zelikova, Google Maps</div></div></div>
     </div>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- CAROUSEL -->
 <section class="s sbg">
   <div class="si">
-    <span class="lbl" data-ru="Голоса клиентов" data-en="Client voices">Голоса клиентов</span>
-    <h2 class="ttl">Отзывы</h2>
+    <span class="lbl" id="s7-lbl">Голоса клиентов</span>
+    <h2 class="ttl" id="s7-ttl">Отзывы</h2>
     <div class="cw">
       <div class="ct" id="ct">
-        <div class="cs"><div class="rc feat"><div class="rsrc">Instagram · @nastasia_nature_thera</div><div class="rtxt" data-ru="«Помимо красивых закатов в Празереше есть ещё одна причина туда поехать. Это доктор Марк. Он настраивает тело как музыкальный инструмент — тонко и мягко, корректируя на очень глубоком уровне. После посещения у меня ощущение, что тело подогнали к новой реальности. Всё сбалансировано. А ещё у доктора Марка прекрасная жена Ольга, которая создаёт красивое поле любви. Быть рядом с вами обоими целительно.»" data-en="'Besides the beautiful sunsets in Prazeres there is another reason to go there. Dr. Mark tunes the body like a musical instrument — subtly and gently. After visiting everything is balanced. And Olga creates a beautiful field of love. Being near both of you is healing.'">«Помимо красивых закатов в Празереше есть ещё одна причина туда поехать. Это доктор Марк. Он настраивает тело как музыкальный инструмент — тонко и мягко, корректируя на очень глубоком уровне. После посещения у меня ощущение, что тело подогнали к новой реальности. Всё сбалансировано. А ещё у доктора Марка прекрасная жена Ольга, которая создаёт красивое поле любви. Быть рядом с вами обоими целительно.»</div><div class="rauth">— Nastasia · Nature therapist ★★★★★</div></div></div>
-        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" data-ru="«Я хочу рассказать об удивительном дуэте — докторе Марке и его жене Ольге. Первый раз я пришла в очень плохом эмоциональном состоянии — тело казалось чужим. После одной сессии исцелилось так много. Месяц спустя тело снова моё.»" data-en="'I want to share about this amazing duo — Dr. Mark and his wife Olga. I came in a very poor emotional state — my body didn't feel like mine. After one session so much healed. A month later my body is mine again.'">«Я хочу рассказать об удивительном дуэте — докторе Марке и его жене Ольге. Первый раз я пришла в очень плохом эмоциональном состоянии — тело казалось чужим. После одной сессии исцелилось так много. Месяц спустя тело снова моё.»</div><div class="rauth">— Tatiana ★★★★★</div></div></div>
-        <div class="cs"><div class="rc"><div class="rsrc">TripAdvisor ★★★★★</div><div class="rtxt" data-ru="«Настоящий спаситель для цифрового кочевника с болью. Принял меня в тот же день. Устранил острую боль и подошёл целостно — смотрел на всё тело. Единственная жалоба — хотел бы брать его с собой в каждое путешествие.»" data-en="'A lifesaver for a digital nomad in pain. Saw me the same day. Relieved the pain with a holistic approach. My only complaint — I wish I could take him everywhere I travel.'">«Настоящий спаситель для цифрового кочевника с болью. Принял меня в тот же день. Устранил острую боль и подошёл целостно — смотрел на всё тело. Единственная жалоба — хотел бы брать его с собой в каждое путешествие.»</div><div class="rauth">— Digital nomad ★★★★★</div></div></div>
-        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" data-ru="«Такого эксперта я не встретила в Канаде. Волшебник с руками пианиста, только он читает тело пациента. Чувствую себя в безопасности, зная что наш доктор всегда придёт на помощь.»" data-en="'I never met such an expert in Canada. A wizard with pianist's hands, only he reads the patient's body. I feel safe knowing our doctor is always there to help.'">«Такого эксперта я не встретила в Канаде. Волшебник с руками пианиста, только он читает тело пациента. Чувствую себя в безопасности, зная что наш доктор всегда придёт на помощь.»</div><div class="rauth">— Lala Naghizada ★★★★★</div></div></div>
-        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" data-ru="«Волшебники! Мастера высокого качества и люди с большими сердцами. В наше время очень мало таких людей и специалистов.»" data-en="'Wizards! High-quality masters and people with big hearts. In our time there are very few such people and specialists.'">«Волшебники! Мастера высокого качества и люди с большими сердцами. В наше время очень мало таких людей и специалистов.»</div><div class="rauth">— Svetlana Lappa ★★★★★</div></div></div>
-        <div class="cs"><div class="rc"><div class="rsrc">TripAdvisor ★★★★★</div><div class="rtxt" data-ru="«Мы с партнёром приехали с долгосрочными нарушениями в плече и бедре. Марк исправил биомеханику обоим. Мы оба почувствовали очень положительную разницу. Марк и Ольга тепло нас встретили.»" data-en="'Both my partner and I had long-term misalignments in the shoulder and hip. Mark corrected our biomechanics. We both felt a very positive difference. Mark and Olga welcomed us warmly.'">«Мы с партнёром приехали с долгосрочными нарушениями в плече и бедре. Марк исправил биомеханику обоим. Мы оба почувствовали очень положительную разницу. Марк и Ольга тепло нас встретили.»</div><div class="rauth">— Пара из Европы ★★★★★</div></div></div>
-        <div class="cs"><div class="rc"><div class="rsrc">TripAdvisor ★★★★★</div><div class="rtxt" data-ru="«Пришла беременной — беспокоилась о положении ребёнка. Марк осмотрел нас очень внимательно и успокоил. Мой ребёнок родился здоровым.»" data-en="'Came while pregnant, worried about my baby's position. Mark examined us carefully and calmed me. My baby was born safe and sound.'">«Пришла беременной — беспокоилась о положении ребёнка. Марк осмотрел нас очень внимательно и успокоил. Мой ребёнок родился здоровым.»</div><div class="rauth">— Пациентка ★★★★★</div></div></div>
-        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" data-ru="«Доктор Марк — уникальный врач с всесторонним видением. Помогал мне много раз, каждый раз с большим успехом. Теперь у меня нет болей в коленях и пояснице.»" data-en="'Dr. Mark is a unique doctor with comprehensive vision. He has helped me many times with great success. Now I have no pain in my knees and lower back.'">«Доктор Марк — уникальный врач с всесторонним видением. Помогал мне много раз, каждый раз с большим успехом. Теперь у меня нет болей в коленях и пояснице.»</div><div class="rauth">— Ekaterina Cherkasova ★★★★★</div></div></div>
+        <div class="cs"><div class="rc feat"><div class="rsrc">Instagram · @nastasia_nature_thera</div><div class="rtxt" id="c1">«Помимо красивых закатов в Празереше есть ещё одна причина туда поехать. Это доктор Марк. Он настраивает тело как музыкальный инструмент — тонко и мягко, корректируя на очень глубоком уровне. После посещения у меня ощущение, что тело подогнали к новой реальности. Всё сбалансировано. А ещё у доктора Марка прекрасная жена Ольга, которая создаёт красивое поле любви. Быть рядом с вами обоими целительно.»</div><div class="rauth">— Nastasia · Nature therapist ★★★★★</div></div></div>
+        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" id="c2">«Я хочу рассказать об удивительном дуэте — докторе Марке и его жене Ольге. Первый раз я пришла в очень плохом эмоциональном состоянии — тело казалось чужим. После одной сессии исцелилось так много. Месяц спустя тело снова моё.»</div><div class="rauth">— Tatiana ★★★★★</div></div></div>
+        <div class="cs"><div class="rc"><div class="rsrc">TripAdvisor ★★★★★</div><div class="rtxt" id="c3">«Настоящий спаситель для цифрового кочевника с болью. Принял меня в тот же день. Устранил острую боль и подошёл целостно — смотрел на всё тело. Единственная жалоба — хотел бы брать его с собой в каждое путешествие.»</div><div class="rauth" id="c3-a">— Digital nomad ★★★★★</div></div></div>
+        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" id="c4">«Такого эксперта я не встретила в Канаде. Волшебник с руками пианиста, только он читает тело пациента. Чувствую себя в безопасности, зная что наш доктор всегда придёт на помощь.»</div><div class="rauth">— Lala Naghizada ★★★★★</div></div></div>
+        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" id="c5">«Волшебники! Мастера высокого качества и люди с большими сердцами. В наше время очень мало таких людей и специалистов.»</div><div class="rauth">— Svetlana Lappa ★★★★★</div></div></div>
+        <div class="cs"><div class="rc"><div class="rsrc">TripAdvisor ★★★★★</div><div class="rtxt" id="c6">«Мы с партнёром приехали с долгосрочными нарушениями в плече и бедре. Марк исправил биомеханику обоим. Мы оба почувствовали очень положительную разницу. Марк и Ольга тепло нас встретили.»</div><div class="rauth" id="c6-a">— Пара из Европы ★★★★★</div></div></div>
+        <div class="cs"><div class="rc"><div class="rsrc">TripAdvisor ★★★★★</div><div class="rtxt" id="c7">«Пришла беременной — беспокоилась о положении ребёнка. Марк осмотрел нас очень внимательно и успокоил. Мой ребёнок родился здоровым.»</div><div class="rauth" id="c7-a">— Пациентка ★★★★★</div></div></div>
+        <div class="cs"><div class="rc"><div class="rsrc">Google Maps ★★★★★</div><div class="rtxt" id="c8">«Доктор Марк — уникальный врач с всесторонним видением. Помогал мне много раз, каждый раз с большим успехом. Теперь у меня нет болей в коленях и пояснице.»</div><div class="rauth">— Ekaterina Cherkasova ★★★★★</div></div></div>
       </div>
-      <div class="cnav">
-        <button class="cbtn" onclick="slide(-1)">‹</button>
-        <div class="cdots" id="dots"></div>
-        <button class="cbtn" onclick="slide(1)">›</button>
-      </div>
+      <div class="cnav"><button class="cbtn" onclick="slide(-1)">&#8249;</button><div class="cdots" id="dots"></div><button class="cbtn" onclick="slide(1)">&#8250;</button></div>
     </div>
-    <a href="#" class="rlink" onclick="showAll();return false" data-ru="Все отзывы →" data-en="All reviews →">Все отзывы →</a>
+    <a href="#" class="rlink" onclick="showAll();return false" id="rlink">Все отзывы →</a>
   </div>
 </section>
-
 <div class="rule"></div>
-
-<!-- ENTRY -->
 <section class="s" id="contact">
   <div class="si" style="text-align:center">
-    <span class="lbl" style="display:block;text-align:center" data-ru="Первый шаг" data-en="First step">Первый шаг</span>
-    <h2 class="ttl" style="text-align:center">Как <em>попасть</em> к нам</h2>
-    <p class="body" style="margin:0 auto;text-align:center" data-ru="Мы работаем только с осознанным запросом. Поэтому первый шаг — короткий разговор, чтобы понять ваше состояние и предложить подходящий формат." data-en="We work only with a conscious request. So the first step is a short conversation to understand your situation and suggest the right format.">Мы работаем только с осознанным запросом. Поэтому первый шаг — короткий разговор, чтобы понять ваше состояние и предложить подходящий формат.</p>
+    <span class="lbl" style="display:block;text-align:center" id="s8-lbl">Первый шаг</span>
+    <h2 class="ttl" style="text-align:center" id="s8-ttl">Как <em>попасть</em> к нам</h2>
+    <p class="body" style="margin:0 auto;text-align:center" id="s8-body">Мы работаем только с осознанным запросом. Поэтому первый шаг — короткий разговор, чтобы понять ваше состояние и предложить подходящий формат</p>
     <div class="es">
-      <div class="est"><div class="en">01</div><div class="et" data-ru="Онлайн-встреча" data-en="Online meeting">Онлайн-встреча</div><div class="ed" data-ru="Бесплатно. 20–30 минут. Понимаем ваш запрос, предлагаем формат." data-en="Free. 20–30 minutes. We understand your request and suggest a format.">Бесплатно. 20–30 минут. Понимаем ваш запрос, предлагаем формат.</div></div>
-      <div class="est"><div class="en">02</div><div class="et" data-ru="Первая сессия" data-en="First session">Первая сессия</div><div class="ed" data-ru="Полный процесс. Эффект начинается и продолжается несколько дней после." data-en="Full process. The effect begins and continues for several days after.">Полный процесс. Эффект начинается и продолжается несколько дней после.</div></div>
-      <div class="est"><div class="en">03</div><div class="et" data-ru="Программа" data-en="Programme">Программа</div><div class="ed" data-ru="4–5 сессий или интенсив — в зависимости от вашего запроса." data-en="4–5 sessions or an intensive — depending on your request.">4–5 сессий или интенсив — в зависимости от вашего запроса.</div></div>
+      <div class="est"><div class="en-num">01</div><div class="et" id="st1-t">Онлайн-встреча</div><div class="ed" id="st1-d">20–30 минут. Понимаем ваш запрос, предлагаем формат</div></div>
+      <div class="est"><div class="en-num">02</div><div class="et" id="st2-t">Первая сессия</div><div class="ed" id="st2-d">Полный процесс. Эффект начинается и продолжается несколько дней после</div></div>
+      <div class="est"><div class="en-num">03</div><div class="et" id="st3-t">Программа восстановления</div><div class="ed" id="st3-d">4–5 сессий — в зависимости от вашего запроса</div></div>
+      <div class="est"><div class="en-num">04</div><div class="et" id="st4-t">Долгосрочная поддержка</div><div class="ed" id="st4-d">Очная сессия — 1 раз в месяц. От 3-х до 6-ти месяцев</div></div>
     </div>
-    <a href="https://wa.me/351919191858" class="btn btn-s" data-ru="Написать в WhatsApp" data-en="Message on WhatsApp">Написать в WhatsApp</a>
+    <a href="https://wa.me/351919191858" class="btn btn-s" id="btn-wa">Написать в WhatsApp</a>
     <p style="margin-top:14px;font-size:16px;font-weight:300;color:var(--muted);letter-spacing:.06em">+351 919 191 858 · +351 924 445 098</p>
   </div>
 </section>
-
 <footer>
   <div class="fb">Resonance Integration</div>
-  <div class="fl">Caminho Lombo dos Barros, 21 · Празереш · Мадейра · Португалия</div>
-  <div class="fls">
-    <a href="https://www.instagram.com/resonanceintegration.madeira/">Instagram</a>
-    <a href="https://www.facebook.com/resonanceintegration.madeira/">Facebook</a>
-    <a href="https://wa.me/351919191858">WhatsApp</a>
-    <a href="https://maps.app.goo.gl/33XZK5MVqotFfGDC7">Google Maps</a>
-  </div>
-  <div class="ftline">«Мы открыли другую вселенную под названием человек»</div>
+  <div class="fl" id="ft-loc">Caminho Lombo dos Barros, 21 · Празереш · Мадейра · Португалия</div>
+  <div class="fls"><a href="https://www.instagram.com/resonanceintegration.madeira/">Instagram</a><a href="https://www.facebook.com/resonanceintegration.madeira/">Facebook</a><a href="https://wa.me/351919191858">WhatsApp</a><a href="https://maps.app.goo.gl/33XZK5MVqotFfGDC7">Google Maps</a></div>
+  <div class="ftline" id="ft-line">«Мы открыли другую вселенную под названием человек»</div>
 </footer>
 </div>
-
-<!-- ALL REVIEWS PAGE -->
 <div id="allrev" style="display:none;padding-top:80px">
   <div style="max-width:940px;margin:0 auto;padding:60px 24px">
-    <button class="back-btn" onclick="showMain()">← <span data-ru="Назад" data-en="Back">Назад</span></button>
-    <span class="lbl" data-ru="Все отзывы" data-en="All reviews">Все отзывы</span>
-    <h2 class="ttl">Что говорят<br><em>наши клиенты</em></h2>
+    <button class="back-btn" onclick="showMain()" id="back-btn">← Назад</button>
+    <span class="lbl" id="ar-lbl">Все отзывы</span>
+    <h2 class="ttl" id="ar-ttl">Что говорят <em>наши клиенты</em></h2>
     <div id="allgrid" style="display:grid;gap:2px;margin-top:36px"></div>
     <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
       <a href="https://www.tripadvisor.com/Attraction_Review-g652087-d28026825-Reviews-Mark_Vdovskikh_Chiropractic_Central_Asia_and_China-Prazeres_Calheta_Madeira_Made.html" class="btn btn-o" target="_blank">TripAdvisor →</a>
@@ -491,72 +267,45 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
     </div>
   </div>
 </div>
-
 <script>
 var lang='ru';
+var T={
+ru:{'nav-method':'Метод','nav-formats':'Форматы','nav-contact':'Контакт','h-eye':'Празереш · Мадейра · Португалия','h-sub':'Метод восстановления живой системы человека','h-stmt':'Мы не исправляем тело.<br>Мы создаём условие, в котором тело<br><em>вспоминает, как быть здоровым</em><br>— и делает это само','btn-cta1':'Записаться на встречу','btn-cta2':'О методе','s1-lbl':'Вы здесь, потому что','s1-ttl':'Что-то не так — <em>и вы это знаете</em>','s1-body':'Вы уже пробовали. Врачи, массаж, упражнения — всё давало временное облегчение. Боль уходит и возвращается. Тело «починено», но внутри что-то не изменилось.','r1':'Хроническая скованность или боль, которая возвращается','r2':'Трудно «собрать себя» — тело не слушается','r3':'Энергия уходит к середине дня без причины','r4':'Тревожность и усталость, которые не проходят','s1-end':'Если вы узнали хотя бы одно — вы попали в нужное место','s2-lbl':'Откуда это пришло','s2-ttl':'Шесть лет практики<br><em>Тысячи часов — Один метод</em>','s2-body':'Это не теория. Это выросло из совместной работы руками с живыми людьми. Один из нас чувствовал структуру тела — позвонки, фасции, суставы. Другая чувствовала состояние человека изнутри — то, что невозможно потрогать, но совершенно реально','s2-quote':'Однажды мы поняли: мы работаем с одним и тем же. Просто разными руками. С тех пор мы больше не разделяем физическое и энергетическое. Для нас это один процесс. Тело — единое. Человек — единый','s2-lbl2':'Пять точек входа','s2-ttl2':'Один сеанс — <em>пять слоёв воздействия</em>','e1-nm':'Настройка звуком · 432 Гц','e1-d':'Музыка частоты 432 Гц снижает симпатическое возбуждение до того, как началась любая работа. Нервная система получает разрешение выйти из режима защиты — ещё до прикосновения','e2-nm':'Камертон · Вибрация в руках','e2-d':'Металлический камертон 432 Гц — прямой механический резонанс через кости, фасции, нервную систему. Тело настраивается на частоту сеанса. Как настройка инструмента перед концертом','e3-nm':'Мануальная работа · Руки, которые слышат','e3-d':'Структурная диагностика и коррекция в уже подготовленном теле. Коррекция в состоянии готовности входит глубже и даёт более стойкий результат','e4-nm':'Энергетическая работа · Считывание поля','e4-d':'Считывание состояния человека изнутри — где застряло, что держит, откуда тянется напряжение. Два канала восприятия создают полную картину и полное воздействие','e5-nm':'Вакуумная стимуляция · Открытие тканей','e5-d':'Вакуумные банки вдоль позвоночника запускают приток свежей крови и лимфодренаж. Ткани становятся живее и восприимчивее. Пациенты говорят: «стало легче дышать», «тяжесть ушла», «спина наконец отпустила»','s3-lbl':'Важно сказать честно','s3-ttl':'Чем метод <em>не является</em>','s3-body':'Каждое из этих слов несёт свою историю и свои ожидания. Мы не хотим, чтобы вы пришли с чужими представлениями.','nt1':'Классическая хиропрактика','nt2':'Рейки','nt3':'Массаж','nt4':'Психотерапия','nt5':'Остеопатия','nt6':'Звукотерапия','nt7':'Йога','nt8':'Физиотерапия','s3-end':'Это собственный метод, выросший из шести лет совместной практики. Комплексный. Авторский. Где физическое, энергетическое и вибрационное воздействие неотделимы друг от друга','s4-lbl':'Пространство как часть метода','s4-quote':'«Наш дом стоит в тихом месте на острове Мадейра. Среда — это первый шаг метода.»','s5-lbl':'Кто за этим стоит','s5-ttl':'Два человека <em>Один метод</em>','f1-role':'Хиропрактик · Структурная работа','f1-name':'Марк Вдовских','f1-txt':'30 лет практики. Традиционные китайские техники, опыт Центральной Азии, индивидуальная коррекция биомеханики. Руки, которые слышат структуру тела — позвонки, фасции, напряжение тканей — прежде чем это видит глаз','f2-role':'Работа с состоянием · Поле · Пространство','f2-name':'Ольга Вдовских','f2-txt':'Практик энергетической работы и архитектор пространства. Чувствует состояние человека изнутри — то, что невозможно потрогать, но совершенно реально. Создаёт условие, в котором тело может снова почувствовать себя дома в своей частоте','s6-lbl':'Как работать с нами','s6-ttl':'Форматы <em>работы</em>','p1-tag':'Первое касание','p1-title':'Онлайн-консультация','p1-price':'35 € · 30–40 минут · видеозвонок','p1-desc':'Иногда перед тем, как куда-то прийти, нужно просто поговорить. Вы рассказываете о своём состоянии — мы слушаем. Не только симптомы, но и то, как давно это началось, что уже пробовали. По итогу вы понимаете: подходит ли вам наш метод и с чего имеет смысл начать','p1-list':'<li>Это не продающий звонок. Это разговор двух людей, один из которых разбирается в теле.</li><li>Разбор вашей ситуации — без шаблонных ответов</li><li>Ясность: что происходит и что с этим можно сделать</li><li>Рекомендация: нужен ли вам курс или достаточно одного приёма</li>','p1-r1':'«Доктор подробно объясняет, что делает и почему, даёт грамотные советы по профилактике. Каждый приём проходит спокойно, внимательно и эффективно.»','p2-tag':'Первый шаг','p2-title':'Первичный приём','p2-price':'117 € · очный · повторная сессия при необходимости — 117 €','p2-desc':'Это встреча, с которой всё начинается. Ещё в дверях что-то меняется. Тихое место, без спешки, без очереди. Нервная система начинает успокаиваться ещё до того, как мы что-то сделали. Это уже начало процесса. После приёма тело продолжает меняться ещё несколько дней. Большинство людей замечают это уже на следующее утро','p2-list':'<li>Структурная диагностика и мануальная коррекция</li><li>Снятие острой или хронической боли</li><li>Запуск собственного процесса восстановления</li><li>Звуковое сопровождение 432 Гц на всей сессии</li>','p2-r1':'«После его сеансов сразу стало легче, чувствуется рука мастера. Более того — у него есть медицинское образование, в отличии от других специалистов на острове.»','p2-r2':'«Первый раз я пришла к ним в очень плохом эмоциональном состоянии, и казалось, что тело вообще не моё. После одной сессии столько всего исцелилось. Вторая сессия — это тонкая настройка.»','p3-tag':'Основной формат','p3-title':'Программа восстановления','p3-price':'420 € · 4–5 сессий · полный протокол метода','p3-desc':'Первая сессия показывает эффект. Программа закрепляет его и возвращает тело в согласованное состояние. Это не набор процедур, применяемых одна за другой. Каждая встреча — следующий слой работы с одной и той же системой. Между сессиями тело продолжает меняться само — мы лишь направляем этот процесс точнее с каждым разом','p3-list':'<li>Сессия 1 — диагностика, первичная коррекция, запуск процесса</li><li>Сессии 2–3 — углублённая работа со структурой и состоянием</li><li>Сессия 4 — вакуумно-градиентная терапия + мануальная работа</li><li>Сессия 5 — тонкая настройка, фиксация результата</li><li>Звук 432 Гц и камертон — на каждой сессии</li>','p3-r1':'«Он настраивает тело как музыкальный инструмент — тонко и мягко, но корректируя на очень глубоком уровне. После посещения — ощущение, что тело подогнали к новой реальности. Всё встало на свои места.»','p3-r2':'«Вся моя семья — его клиенты. Мы приходим к Марку когда совсем разваливаемся. Он знает, что не так, и умеет собрать всё обратно.»','p3-r3':'«Месяц спустя я чувствую себя совершенно другим человеком в своём теле — оно снова моё. Я тренируюсь и наконец вижу результаты.»','p4-tag':'Долгосрочная поддержка','p4-title':'Абонемент сопровождения','p4-price':'3 месяца · 432 € (скидка 10%) | 6 месяцев · 816 € (скидка 15%)','p4-desc':'После программы тело знает, как быть в порядке. Абонемент — это не лечение. Это разговор с телом, который не прерывается. Раз в месяц — очная сессия. Мы смотрим, как тело держит результат, где начинает накапливаться напряжение раньше, чем оно становится болью','p4-list':'<li>1 очная сессия в месяц</li><li>Онлайн-разборы между встречами — по необходимости</li><li>Приоритетная запись</li><li>Абонемент открыт для тех, кто уже прошёл первичный приём или программу</li>','p4-r1':'«Познакомился с доктором Марком несколько лет назад — и с тех пор регулярно обращаюсь. Это не просто хороший хиропрактик, а настоящий профессионал, который искренне заботится о своих пациентах.»','p4-r2':'«Волшебники! Очень рада знакомству с людьми, которые и Мастера высокого качества, и люди с высокой энергетикой, и большими сердцами. В наше время очень мало таких людей и специалистов.»','p5-tag':'Медицинский туризм','p5-title':'Приехать на Мадейру — и восстановиться','p5-price':'420 € · программа 4–5 сессий · 100% предоплата · запись на даты','p5-desc':'Мадейра — остров, на котором тело само начинает выдыхать. Левады, океан, горы, воздух. И если вы уже едете сюда — имеет смысл дать телу больше, чем просто отдых. Мы работаем с теми, кто приезжает целенаправленно: заложить восстановление в маршрут поездки, пройти полный протокол за 10–15 дней, уехать иначе, чем приехал.','p5-list':'<li>Полная программа восстановления — 4–5 сессий</li><li>Все пять элементов метода, включая вакуумную терапию</li><li>Работа на русском, English, Português</li><li>Запись на даты — бронирование с предоплатой</li>','p5-r1':'«Помимо красивых закатов в Прасереше есть ещё одна причина туда поехать. Это доктор Марк. Нам повезло, что на острове есть специалист такого уровня. Сейчас чувствую — всё сбалансировано. Движение ускорилось.»','p5-r2':'«Если вы на Мадейре и хотите улучшить своё здоровье — идите к доктору Марку. Индивидуальный подход, никогда не отпустит, пока не решит проблему. Рекомендую от всего сердца.»','s7-lbl':'Голоса клиентов','s7-ttl':'Отзывы','c1':'«Помимо красивых закатов в Празереше есть ещё одна причина туда поехать. Это доктор Марк. Он настраивает тело как музыкальный инструмент — тонко и мягко, корректируя на очень глубоком уровне. После посещения у меня ощущение, что тело подогнали к новой реальности. Всё сбалансировано. А ещё у доктора Марка прекрасная жена Ольга, которая создаёт красивое поле любви. Быть рядом с вами обоими целительно.»','c2':'«Я хочу рассказать об удивительном дуэте — докторе Марке и его жене Ольге. Первый раз я пришла в очень плохом эмоциональном состоянии — тело казалось чужим. После одной сессии исцелилось так много. Месяц спустя тело снова моё.»','c3':'«Настоящий спаситель для цифрового кочевника с болью. Принял меня в тот же день. Устранил острую боль и подошёл целостно — смотрел на всё тело. Единственная жалоба — хотел бы брать его с собой в каждое путешествие.»','c3-a':'— Digital nomad ★★★★★','c4':'«Такого эксперта я не встретила в Канаде. Волшебник с руками пианиста, только он читает тело пациента. Чувствую себя в безопасности, зная что наш доктор всегда придёт на помощь.»','c5':'«Волшебники! Мастера высокого качества и люди с большими сердцами. В наше время очень мало таких людей и специалистов.»','c6':'«Мы с партнёром приехали с долгосрочными нарушениями в плече и бедре. Марк исправил биомеханику обоим. Мы оба почувствовали очень положительную разницу. Марк и Ольга тепло нас встретили.»','c6-a':'— Пара из Европы ★★★★★','c7':'«Пришла беременной — беспокоилась о положении ребёнка. Марк осмотрел нас очень внимательно и успокоил. Мой ребёнок родился здоровым.»','c7-a':'— Пациентка ★★★★★','c8':'«Доктор Марк — уникальный врач с всесторонним видением. Помогал мне много раз, каждый раз с большим успехом. Теперь у меня нет болей в коленях и пояснице.»','rlink':'Все отзывы →','s8-lbl':'Первый шаг','s8-ttl':'Как <em>попасть</em> к нам','s8-body':'Мы работаем только с осознанным запросом. Поэтому первый шаг — короткий разговор, чтобы понять ваше состояние и предложить подходящий формат','st1-t':'Онлайн-встреча','st1-d':'20–30 минут. Понимаем ваш запрос, предлагаем формат','st2-t':'Первая сессия','st2-d':'Полный процесс. Эффект начинается и продолжается несколько дней после','st3-t':'Программа восстановления','st3-d':'4–5 сессий — в зависимости от вашего запроса','st4-t':'Долгосрочная поддержка','st4-d':'Очная сессия — 1 раз в месяц. От 3-х до 6-ти месяцев','btn-wa':'Написать в WhatsApp','ft-loc':'Caminho Lombo dos Barros, 21 · Празереш · Мадейра · Португалия','ft-line':'«Мы открыли другую вселенную под названием человек»','back-btn':'← Назад','ar-lbl':'Все отзывы','ar-ttl':'Что говорят <em>наши клиенты</em>'},
+en:{'nav-method':'Method','nav-formats':'Sessions','nav-contact':'Contact','h-eye':'Prazeres · Madeira · Portugal','h-sub':'Method for restoring the human living system','h-stmt':'We don\'t fix the body.<br>We create a condition in which the body<br><em>remembers how to be healthy</em><br>— and does it itself','btn-cta1':'Book a consultation','btn-cta2':'About the method','s1-lbl':'You\'re here because','s1-ttl':'Something is wrong — <em>and you know it</em>','s1-body':'You\'ve already tried. Doctors, massage, exercises — all gave temporary relief. The pain leaves and returns. The body seems fixed, but inside something hasn\'t changed.','r1':'Chronic stiffness or pain that keeps returning','r2':'Hard to pull yourself together — the body doesn\'t respond','r3':'Energy drains by midday for no clear reason','r4':'Anxiety and fatigue that won\'t go away','s1-end':'If you recognised even one — you\'re in the right place','s2-lbl':'How it began','s2-ttl':'Six years of practice<br><em>Thousands of hours — One method</em>','s2-body':'This is not a theory. It grew from hands-on work with real people. One of us felt the body\'s structure — vertebrae, fascia, joints. The other felt the person\'s inner state — something you can\'t touch, but is completely real','s2-quote':'One day we realised: we were working with the same thing. Just with different hands. Since then we no longer separate the physical and the energetic. For us it is one process. The body is whole. The person is whole','s2-lbl2':'Five points of entry','s2-ttl2':'One session — <em>five layers of impact</em>','e1-nm':'Sound tuning · 432 Hz','e1-d':'Music at 432 Hz reduces sympathetic arousal before any work begins. The nervous system receives permission to leave defence mode — before any touch','e2-nm':'Tuning fork · Vibration through hands','e2-d':'A 432 Hz metal tuning fork transmits direct mechanical resonance through bones, fascia and the nervous system. The body tunes to the session frequency — like an instrument before a concert','e3-nm':'Manual work · Hands that listen','e3-d':'Structural diagnosis and correction in an already prepared body. Correction in a state of readiness goes deeper and produces lasting results','e4-nm':'Energy work · Reading the field','e4-d':'Reading the person\'s inner state — where it\'s stuck, what holds it, where tension comes from. Two channels of perception create a complete picture and full impact','e5-nm':'Vacuum stimulation · Opening the tissues','e5-d':'Vacuum cups along the spine activate fresh blood flow and lymphatic drainage. Tissues become more alive and receptive. Patients say: \'breathing became easier\', \'the heaviness lifted\', \'my back finally let go\'','s3-lbl':'Important to say clearly','s3-ttl':'What the method <em>is not</em>','s3-body':'Each of these words carries its own history and expectations. We don\'t want you to arrive with someone else\'s assumptions.','nt1':'Classical chiropractic','nt2':'Reiki','nt3':'Massage','nt4':'Psychotherapy','nt5':'Osteopathy','nt6':'Sound therapy','nt7':'Yoga','nt8':'Physiotherapy','s3-end':'A proprietary method grown from six years of joint practice. Holistic. Original. Where physical, energetic and vibrational impact are inseparable from each other','s4-lbl':'The space as part of the method','s4-quote':'\'Our home stands in a quiet place on the island of Madeira. The environment is the first step of the method\'','s5-lbl':'Who stands behind this','s5-ttl':'Two people <em>One method</em>','f1-role':'Chiropractor · Structural work','f1-name':'Mark Vdovskikh','f1-txt':'30 years of practice. Traditional Chinese techniques, Central Asian experience, individual biomechanical correction. Hands that hear the body\'s structure — vertebrae, fascia, tissue tension — before the eye sees it','f2-role':'State work · Field · Space','f2-name':'Olga Vdovskikh','f2-txt':'Energy practitioner and space architect. Feels the person\'s inner state — something you can\'t touch, but is completely real. Creates a condition in which the body can feel at home in its own frequency again','s6-lbl':'How to work with us','s6-ttl':'Work <em>formats</em>','p1-tag':'First contact','p1-title':'Online consultation','p1-price':'35 € · 30–40 minutes · video call','p1-desc':'Sometimes before going somewhere you just need to talk. You tell us about your condition — we listen. Not just the symptoms, but how long it\'s been, what you\'ve tried. By the end you\'ll know whether our method is right for you and where to start','p1-list':'<li>This is not a sales call. It\'s a conversation between two people, one of whom understands the body.</li><li>Analysis of your situation — no template answers</li><li>Clarity: what is happening and what can be done</li><li>Recommendation: whether you need a course or one session is enough</li>','p1-r1':'\'The doctor explains in detail what he does and why, gives sound prevention advice. Every appointment is calm, attentive and effective.\'','p2-tag':'First step','p2-title':'Initial session','p2-price':'117 € · in-person · repeat session if needed — 117 €','p2-desc':'This is the meeting where everything begins. Something changes even in the doorway. A quiet place, no rush, no queue. The nervous system begins to calm before we\'ve done anything. That\'s already the beginning of the process. After the session, the body continues to change for several days. Most people notice it the very next morning','p2-list':'<li>Structural diagnosis and manual correction</li><li>Relief of acute or chronic pain</li><li>Triggering the body\'s own recovery process</li><li>432 Hz sound accompaniment throughout the session</li>','p2-r1':'\'After his sessions it immediately became easier, you can feel a master\'s hands. What\'s more — he has medical training, unlike other specialists on the island.\'','p2-r2':'\'The first time I came to them I was in a very poor emotional state, and it felt like my body wasn\'t even mine. After one session so much was healed. The second session was a fine-tuning.\'','p3-tag':'Core format','p3-title':'Recovery programme','p3-price':'420 € · 4–5 sessions · full method protocol','p3-desc':'The first session shows the effect. The programme consolidates it and returns the body to a coherent state. This is not a set of procedures applied one after another. Each meeting is the next layer of work with the same system. Between sessions the body continues to change on its own — we simply guide the process more precisely each time','p3-list':'<li>Session 1 — diagnosis, initial correction, starting the process</li><li>Sessions 2–3 — deeper work with structure and state</li><li>Session 4 — vacuum-gradient therapy + manual work</li><li>Session 5 — fine-tuning, consolidating the result</li><li>432 Hz sound and tuning fork — at every session</li>','p3-r1':'\'He tunes the body like a musical instrument — subtly and gently, but correcting on a very deep level. After visiting — the feeling that the body has been adjusted to a new reality. Everything fell into place.\'','p3-r2':'\'All my family are his clients. We come to Mark when we\'re completely falling apart. He knows what\'s wrong and knows how to put everything back together.\'','p3-r3':'\'A month later I feel like a completely different person in my body — it\'s mine again. I\'m training and finally seeing results.\'','p4-tag':'Long-term support','p4-title':'Ongoing support','p4-price':'3 months · 432 € (10% off) | 6 months · 816 € (15% off)','p4-desc':'After the programme the body knows how to be well. The subscription is not treatment. It\'s a conversation with the body that doesn\'t stop. Once a month — an in-person session. We check how the body holds the result, where tension is beginning to accumulate before it becomes pain','p4-list':'<li>1 in-person session per month</li><li>Online check-ins between sessions — as needed</li><li>Priority booking</li><li>Available to those who have already completed an initial session or programme</li>','p4-r1':'\'I met Dr. Mark several years ago and have been coming regularly ever since. He\'s not just a good chiropractor — he\'s a true professional who genuinely cares about his patients.\'','p4-r2':'\'Wizards! So glad to meet people who are both high-quality masters and people with powerful energy and big hearts. There are very few such people and specialists nowadays.\'','p5-tag':'Medical tourism','p5-title':'Come to Madeira — and recover','p5-price':'420 € · 4–5 session programme · 100% prepayment · booking by dates','p5-desc':'Madeira is an island where the body starts to breathe on its own. Levadas, ocean, mountains, air. And if you\'re already coming here — it makes sense to give your body more than just rest. We work with those who come with a purpose: to build recovery into their travel itinerary, complete the full protocol in 10–15 days, and leave differently than they arrived.','p5-list':'<li>Full recovery programme — 4–5 sessions</li><li>All five elements of the method, including vacuum therapy</li><li>Sessions in Russian, English, Portuguese</li><li>Booking by dates — reservation with prepayment</li>','p5-r1':'\'Besides the beautiful sunsets in Prazeres there is another reason to go there. That\'s Dr. Mark. We are lucky to have a specialist of this level on the island. Now I feel — everything is balanced. Movement has accelerated.\'','p5-r2':'\'If you\'re in Madeira and want to improve your health — go to Dr. Mark. Individual approach, he never lets go until he solves the problem. I recommend wholeheartedly.\'','s7-lbl':'Client voices','s7-ttl':'Reviews','c1':'\'Besides the beautiful sunsets in Prazeres there is another reason to go there. Dr. Mark tunes the body like a musical instrument — subtly and gently. After visiting everything is balanced. And Olga creates a beautiful field of love. Being near both of you is healing.\'','c2':'\'I want to share about this amazing duo — Dr. Mark and his wife Olga. I came in a very poor emotional state — my body didn\'t feel like mine. After one session so much healed. A month later my body is mine again.\'','c3':'\'A lifesaver for a digital nomad in pain. Saw me the same day. Relieved the pain with a holistic approach. My only complaint — I wish I could take him everywhere I travel.\'','c3-a':'— Digital nomad ★★★★★','c4':'\'I never met such an expert in Canada. A wizard with pianist\'s hands, only he reads the patient\'s body. I feel safe knowing our doctor is always there to help.\'','c5':'\'Wizards! High-quality masters and people with big hearts. In our time there are very few such people and specialists.\'','c6':'\'Both my partner and I had long-term misalignments in the shoulder and hip. Mark corrected our biomechanics. We both felt a very positive difference. Mark and Olga welcomed us warmly.\'','c6-a':'— A married couple from Europe ★★★★★','c7':'\'Came while pregnant, worried about my baby\'s position. Mark examined us carefully and calmed me. My baby was born safe and sound.\'','c7-a':'— Patient ★★★★★','c8':'\'Dr. Mark is a unique doctor with comprehensive vision. He has helped me many times with great success. Now I have no pain in my knees and lower back.\'','rlink':'All reviews →','s8-lbl':'First step','s8-ttl':'How to <em>get to us</em>','s8-body':'We work only with a conscious request. So the first step is a short conversation to understand your situation and suggest the right format','st1-t':'Online meeting','st1-d':'20–30 minutes. We understand your request and suggest a format','st2-t':'First session','st2-d':'Full process. The effect begins and continues for several days after','st3-t':'Recovery programme','st3-d':'4–5 sessions — depending on your request','st4-t':'Long-term support','st4-d':'1 in-person session per month. From 3 to 6 months','btn-wa':'Message on WhatsApp','ft-loc':'Caminho Lombo dos Barros, 21 · Prazeres · Madeira · Portugal','ft-line':'"We have discovered another universe called man"','back-btn':'← Back','ar-lbl':'All reviews','ar-ttl':'What our <em>clients say</em>'}
+};
 function toggleLang(){
   lang=lang==='ru'?'en':'ru';
-  document.querySelector('.lb').textContent=lang==='ru'?'EN':'RU';
-  document.querySelectorAll('[data-ru]').forEach(function(el){
-    var t=el.getAttribute('data-'+lang);
-    if(t)el.innerHTML=t;
-  });
+  document.getElementById('langbtn').textContent=lang==='ru'?'EN':'RU';
   document.documentElement.lang=lang;
+  var d=T[lang];
+  for(var id in d){var el=document.getElementById(id);if(el)el.innerHTML=d[id];}
+  var ht=document.querySelector('.h-t1');var ht2=document.querySelector('.h-t2');
+  if(lang==='en'){ht.textContent='Resonance';ht2.textContent='Integration';}
+  else{ht.textContent='Резонансная';ht2.textContent='Интеграция';}
+  document.getElementById('allgrid').innerHTML='';
 }
-
-var cur=0;
-var slides=document.querySelectorAll('.cs');
-var track=document.getElementById('ct');
-var dotsEl=document.getElementById('dots');
-slides.forEach(function(_,i){
-  var d=document.createElement('button');
-  d.className='cdot'+(i===0?' active':'');
-  d.onclick=function(){goTo(i)};
-  dotsEl.appendChild(d);
-});
-function goTo(n){
-  cur=(n+slides.length)%slides.length;
-  track.style.transform='translateX(-'+cur*100+'%)';
-  document.querySelectorAll('.cdot').forEach(function(d,i){d.classList.toggle('active',i===cur)});
-}
+var cur=0,slides=document.querySelectorAll('.cs'),track=document.getElementById('ct'),dotsEl=document.getElementById('dots');
+slides.forEach(function(_,i){var d=document.createElement('button');d.className='cdot'+(i===0?' active':'');d.onclick=function(){goTo(i)};dotsEl.appendChild(d);});
+function goTo(n){cur=(n+slides.length)%slides.length;track.style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('.cdot').forEach(function(d,i){d.classList.toggle('active',i===cur)});}
 function slide(dir){goTo(cur+dir)}
 setInterval(function(){slide(1)},6000);
-
-var allData=[
-  {src:'Instagram',ru:'«Помимо красивых закатов в Прасереше есть ещё одна причина туда поехать. Это доктор Марк. Он настраивает тело как музыкальный инструмент — тонко и мягко. Сейчас чувствую — всё сбалансировано. А ещё у доктора Марка прекрасная жена Ольга, которая создаёт красивое поле любви.»',en:'"Besides beautiful sunsets in Prazeres there is another reason to go there. Dr. Mark tunes the body like a musical instrument. Everything is balanced. And Olga creates a beautiful field of love."',author:'Nastasia · Nature therapist ★★★★★'},
-  {src:'Google Maps',ru:'«Удивительный дуэт — доктор Марк и его жена Ольга. Первый раз я пришла в очень плохом эмоциональном состоянии. После одной сессии столько всего исцелилось. Месяц спустя тело снова моё.»',en:'"An amazing duo. I came in a very poor emotional state. After one session so much healed. A month later my body is mine again."',author:'Tatiana ★★★★★'},
-  {src:'TripAdvisor',ru:'«Настоящий спаситель для цифрового кочевника с болью. Принял меня в тот же день. Подошёл целостно. Единственная жалоба — хотел бы брать его с собой в каждое путешествие.»',en:'"A lifesaver for a digital nomad in pain. Saw me the same day. Holistic approach. Only complaint — I wish I could take him everywhere."',author:'Digital nomad ★★★★★'},
-  {src:'Google Maps',ru:'«После первой же сессии стало легче — чувствуется рука мастера. Отдельная благодарность Ольге за банки — всё аккуратно и с заботой.»',en:'"After the first session it became easier. Special thanks to Olga for the cupping — everything precise and caring."',author:'Екатерина Бойко ★★★★★'},
-  {src:'Google Maps',ru:'«Познакомилась с доктором Марком несколько лет назад. Каждый приём спокойно, внимательно и эффективно. Настоящий профессионал.»',en:'"I\'ve been coming to Dr. Mark for years. Every appointment calm, attentive and effective."',author:'Daria Butova ★★★★★'},
-  {src:'TripAdvisor',ru:'«Пришла беременной — беспокоилась о положении ребёнка. Марк осмотрел нас очень внимательно и успокоил. Мой ребёнок родился здоровым.»',en:'"Came while pregnant, worried about my baby\'s position. Mark examined us carefully. My baby was born safe and sound."',author:'Пациентка ★★★★★'},
-  {src:'Google Maps',ru:'«Такого эксперта я не встретила в Канаде. Волшебник с руками пианиста, только он читает тело. Чувствую себя в безопасности.»',en:'"Never met such an expert in Canada. A wizard with pianist\'s hands, but he reads the body. I feel safe."',author:'Lala Naghizada ★★★★★'},
-  {src:'Google Maps',ru:'«Волшебники! Мастера высокого качества и люди с большими сердцами. В наше время очень мало таких людей.»',en:'"Wizards! High-quality masters and people with big hearts. Very few such people nowadays."',author:'Svetlana Lappa ★★★★★'},
-  {src:'TripAdvisor',ru:'«Мы с партнёром оба почувствовали очень положительную разницу. Марк исправил биомеханику обоим. Марк и Ольга тепло нас встретили.»',en:'"Both my partner and I felt a very positive difference. Mark corrected our biomechanics. Mark and Olga welcomed us warmly."',author:'Пара из Европы ★★★★★'},
-  {src:'TripAdvisor',ru:'«Нашли для меня время даже в воскресенье. Очень дружелюбный подход. Хорошее общение с миссис Ольгой.»',en:'"Found time for me even on Sunday. Very friendly approach. Good communication also with Mrs. Olga."',author:'Tomáš Veselý ★★★★★'},
-  {src:'TripAdvisor',ru:'«Вся моя семья — его клиенты. Мы приходим к Марку когда совсем разваливаемся. Он знает, что не так, и умеет собрать всё обратно.»',en:'"All my family are his clients. We come when we\'re falling apart. He knows what\'s wrong and puts everything back together."',author:'Evgenia Zahra ★★★★★'},
-  {src:'Google Maps',ru:'«Доктор Марк — уникальный врач с всесторонним видением. Помогал мне много раз. Теперь у меня нет болей в коленях и пояснице.»',en:'"Dr. Mark is a unique doctor with comprehensive vision. He has helped me many times. No more pain in my knees and lower back."',author:'Ekaterina Cherkasova ★★★★★'},
-  {src:'Google Maps',ru:'«Если вы на Мадейре и хотите улучшить своё здоровье — идите к доктору Марку. Индивидуальный подход, никогда не отпустит, пока не решит проблему.»',en:'"If you\'re in Madeira and want to improve your health — go to Dr. Mark. Individual approach, he never lets go until he solves the problem."',author:'Olesia Zelikova ★★★★★'},
-];
-
+var AR={ru:[{s:'Instagram',t:'«Помимо красивых закатов в Прасереше есть ещё одна причина туда поехать. Это доктор Марк. Настраивает тело как музыкальный инструмент. Всё сбалансировано. А ещё у доктора Марка прекрасная жена Ольга, которая создаёт красивое поле любви.»',a:'Nastasia ★★★★★'},{s:'Google Maps',t:'«Удивительный дуэт — доктор Марк и его жена Ольга. После одной сессии исцелилось так много. Месяц спустя тело снова моё.»',a:'Tatiana ★★★★★'},{s:'TripAdvisor',t:'«Принял меня в тот же день. Единственная жалоба — хотел бы брать его с собой в каждое путешествие.»',a:'Digital nomad ★★★★★'},{s:'Google Maps',t:'«После первой же сессии стало легче — чувствуется рука мастера. Отдельная благодарность Ольге за банки.»',a:'Екатерина Бойко ★★★★★'},{s:'Google Maps',t:'«Каждый приём проходит спокойно, внимательно и эффективно. Настоящий профессионал.»',a:'Daria Butova ★★★★★'},{s:'TripAdvisor',t:'«Пришла беременной. Марк осмотрел нас очень внимательно и успокоил. Мой ребёнок родился здоровым.»',a:'Пациентка ★★★★★'},{s:'Google Maps',t:'«Волшебник с руками пианиста, только он читает тело. Чувствую себя в безопасности.»',a:'Lala Naghizada ★★★★★'},{s:'Google Maps',t:'«Волшебники! Мастера высокого качества и люди с большими сердцами.»',a:'Svetlana Lappa ★★★★★'},{s:'TripAdvisor',t:'«Мы с партнёром оба почувствовали очень положительную разницу. Марк и Ольга тепло нас встретили.»',a:'Пара из Европы ★★★★★'},{s:'TripAdvisor',t:'«Нашли для меня время даже в воскресенье. Хорошее общение с миссис Ольгой.»',a:'Tomáš Veselý ★★★★★'},{s:'TripAdvisor',t:'«Вся моя семья — его клиенты. Он знает, что не так, и умеет собрать всё обратно.»',a:'Evgenia Zahra ★★★★★'},{s:'Google Maps',t:'«Теперь у меня нет болей в коленях и пояснице.»',a:'Ekaterina Cherkasova ★★★★★'},{s:'Google Maps',t:'«Рекомендую от всего сердца.»',a:'Olesia Zelikova ★★★★★'}],
+en:[{s:'Instagram',t:'\'Dr. Mark tunes the body like a musical instrument. Everything is balanced. And Olga creates a beautiful field of love.\'',a:'Nastasia ★★★★★'},{s:'Google Maps',t:'\'After one session so much healed. A month later my body is mine again.\'',a:'Tatiana ★★★★★'},{s:'TripAdvisor',t:'\'Saw me the same day. My only complaint — I wish I could take him everywhere.\'',a:'Digital nomad ★★★★★'},{s:'Google Maps',t:'\'After the first session it became easier. Special thanks to Olga for the cupping.\'',a:'Ekaterina Boyko ★★★★★'},{s:'Google Maps',t:'\'Every appointment calm, attentive and effective. A true professional.\'',a:'Daria Butova ★★★★★'},{s:'TripAdvisor',t:'\'Came while pregnant. Mark examined us carefully. My baby was born safe and sound.\'',a:'Patient ★★★★★'},{s:'Google Maps',t:'\'A wizard with pianist\'s hands, but he reads the body. I feel safe.\'',a:'Lala Naghizada ★★★★★'},{s:'Google Maps',t:'\'Wizards! High-quality masters and people with big hearts.\'',a:'Svetlana Lappa ★★★★★'},{s:'TripAdvisor',t:'\'Both my partner and I felt a very positive difference. Mark and Olga welcomed us warmly.\'',a:'A couple from Europe ★★★★★'},{s:'TripAdvisor',t:'\'Found time for me even on Sunday. Good communication also with Mrs. Olga.\'',a:'Tomáš Veselý ★★★★★'},{s:'TripAdvisor',t:'\'All my family are his clients. He knows what\'s wrong and puts everything back together.\'',a:'Evgenia Zahra ★★★★★'},{s:'Google Maps',t:'\'Now I have no pain in my knees and lower back.\'',a:'Ekaterina Cherkasova ★★★★★'},{s:'Google Maps',t:'\'I recommend wholeheartedly.\'',a:'Olesia Zelikova ★★★★★'}]};
 function showAll(){
   document.getElementById('main').style.display='none';
   document.getElementById('allrev').style.display='block';
   window.scrollTo(0,0);
   var g=document.getElementById('allgrid');
   if(g.children.length===0){
-    allData.forEach(function(r){
+    AR[lang].forEach(function(r){
       var d=document.createElement('div');
-      d.style.cssText='background:var(--dark3);padding:24px 28px;margin-bottom:2px';
-      d.innerHTML='<div style="font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">'+r.src+'</div><div style="font-size:18px;font-weight:300;line-height:1.8;color:var(--white);margin-bottom:12px;font-style:italic;letter-spacing:.02em">'+(lang==='ru'?r.ru:r.en)+'</div><div style="font-size:13px;font-weight:400;letter-spacing:.12em;color:var(--muted);text-transform:uppercase">'+r.author+'</div>';
+      d.style.cssText='background:var(--d3);padding:24px 28px;margin-bottom:2px';
+      d.innerHTML='<div style="font-size:12px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">'+r.s+'</div><div style="font-size:18px;font-weight:300;line-height:1.8;color:var(--white);margin-bottom:12px;font-style:italic;letter-spacing:.02em">'+r.t+'</div><div style="font-size:13px;font-weight:400;letter-spacing:.12em;color:var(--muted);text-transform:uppercase">'+r.a+'</div>';
       g.appendChild(d);
     });
   }
 }
-function showMain(){
-  document.getElementById('main').style.display='block';
-  document.getElementById('allrev').style.display='none';
-  window.scrollTo(0,0);
-}
+function showMain(){document.getElementById('main').style.display='block';document.getElementById('allrev').style.display='none';window.scrollTo(0,0);}
 </script>
 </body>
 </html>
