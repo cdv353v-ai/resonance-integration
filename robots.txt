@@ -1,0 +1,82 @@
+# robots.txt for Resonance Integration
+# https://resonanceintegration.cc/
+# Last updated: 2026-05-03
+
+# ------------------------------------------------------------
+# Default rule: all crawlers allowed full access
+# ------------------------------------------------------------
+User-agent: *
+Allow: /
+
+# ------------------------------------------------------------
+# AI crawlers — explicitly welcomed
+# These directives signal to LLM operators that the site
+# may be used for both real-time retrieval and training.
+# ------------------------------------------------------------
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Gemini / Bard training)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# DuckDuckGo Assist
+User-agent: DuckAssistBot
+Allow: /
+
+# ByteDance (Doubao / TikTok AI)
+User-agent: Bytespider
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# ------------------------------------------------------------
+# Sitemap
+# ------------------------------------------------------------
+Sitemap: https://resonanceintegration.cc/sitemap.xml
