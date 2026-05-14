@@ -39,6 +39,24 @@
   </url>
 
   <url>
+    <loc>https://resonanceintegration.cc/articles/the-body-remembers-sound/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/the-body-remembers-sound/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/the-body-remembers-sound/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://resonanceintegration.cc/en/articles/the-body-remembers-sound/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/the-body-remembers-sound/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/the-body-remembers-sound/"/>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://resonanceintegration.cc/articles/holiday-pain-recovery-madeira/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/holiday-pain-recovery-madeira/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/holiday-pain-recovery-madeira/"/>
