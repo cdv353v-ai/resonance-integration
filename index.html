@@ -57,7 +57,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:fl
 .na:hover{color:var(--gold)}
 .lb{font-size:13px;font-weight:500;letter-spacing:.15em;background:none;border:1px solid var(--mid);color:var(--muted);padding:5px 14px;cursor:pointer;transition:all .2s;font-family:var(--f);text-decoration:none;display:inline-block}
 .lb:hover{border-color:var(--gold);color:var(--gold)}
-@media(max-width:600px){nav{padding:14px 20px}.na{display:none}}
+.hbtn{display:none;background:none;border:none;color:var(--gl);font-size:22px;cursor:pointer;padding:4px 8px;line-height:1;font-family:var(--f)}
+@media(max-width:600px){
+  nav{padding:14px 20px}
+  .hbtn{display:block}
+  .nl{display:none}
+  .nl.open{display:flex;flex-direction:column;position:fixed;top:53px;left:0;right:0;background:rgba(10,9,5,.98);border-bottom:1px solid var(--mid);padding:16px 20px;gap:0;z-index:99}
+  .nl.open .na{display:block;padding:12px 0;border-bottom:1px solid var(--mid);font-size:14px}
+  .nl.open .na:last-of-type{border-bottom:none}
+  .nl.open .lb{margin-top:12px;display:inline-block}
+}
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(ellipse,rgba(201,169,110,.09) 0%,transparent 65%);pointer-events:none}
 .h-eye{font-size:13px;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
@@ -217,13 +226,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav>
 <a href="/" class="nb">RESONANCE INTEGRATION</a>
-<div class="nl">
+<div class="nl" id="nl">
 <a href="#method" class="na">Метод</a>
 <a href="#formats" class="na">Форматы</a>
 <a href="#contact" class="na">Контакт</a>
 <a href="/partners/" class="na">Партнёрство</a>
 <a href="/en/" class="lb" hreflang="en" rel="alternate">EN</a>
 </div>
+<button class="hbtn" id="hbtn" aria-label="Меню">&#9776;</button>
 </nav>
 
 <section class="s hero">
@@ -423,6 +433,10 @@ gtag('event','view_tourism_page',{event_category:'engagement',language:'ru'});
 gtag('event','view_partners',{event_category:'engagement',language:'ru'});
 }
 });
+
+var hbtn=document.getElementById('hbtn'),nl=document.getElementById('nl');
+hbtn.addEventListener('click',function(){nl.classList.toggle('open');hbtn.innerHTML=nl.classList.contains('open')?'&#10005;':'&#9776;'});
+nl.querySelectorAll('.na').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open');hbtn.innerHTML='&#9776;'})});
 </script>
 </body>
 </html>
