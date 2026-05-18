@@ -58,6 +58,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:fl
 .lb{font-size:13px;font-weight:500;letter-spacing:.15em;background:none;border:1px solid var(--mid);color:var(--muted);padding:5px 14px;cursor:pointer;transition:all .2s;font-family:var(--f);text-decoration:none;display:inline-block}
 .lb:hover{border-color:var(--gold);color:var(--gold)}
 @media(max-width:600px){nav{padding:14px 20px}.na{display:none}}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;margin-left:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--gl);transition:all .3s}
+@media(max-width:600px){.burger{display:flex}}
+.mob{display:none;position:fixed;inset:0;background:rgba(10,9,5,.98);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:36px}
+.mob.open{display:flex}
+.mob-x{position:absolute;top:18px;right:20px;background:none;border:none;color:var(--gl);font-size:32px;cursor:pointer;font-family:var(--f);line-height:1}
+.mob-a{font-size:20px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--text);text-decoration:none;transition:color .2s}
+.mob-a:hover{color:var(--gold)}
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(ellipse,rgba(201,169,110,.09) 0%,transparent 65%);pointer-events:none}
 .h-eye{font-size:13px;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
@@ -314,9 +322,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="#method" class="na">Метод</a>
 <a href="#formats" class="na">Форматы</a>
 <a href="#contact" class="na">Контакт</a>
+<a href="/partnership/" class="na">Партнёрство</a>
 <a href="/en/" class="lb" hreflang="en" rel="alternate">EN</a>
+<button class="burger" onclick="openMob()" aria-label="Меню"><span></span><span></span><span></span></button>
 </div>
 </nav>
+<div class="mob" id="mob">
+<button class="mob-x" onclick="closeMob()">×</button>
+<a href="#method" class="mob-a" onclick="closeMob()">Метод</a>
+<a href="#formats" class="mob-a" onclick="closeMob()">Форматы</a>
+<a href="#contact" class="mob-a" onclick="closeMob()">Контакт</a>
+<a href="/partnership/" class="mob-a" onclick="closeMob()">Партнёрство</a>
+<a href="/en/" class="lb" onclick="closeMob()">EN</a>
+</div>
 
 <section class="s hero">
 <div class="h-eye">Празереш · Мадейра · Португалия</div>
@@ -573,6 +591,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
+function openMob(){document.getElementById('mob').classList.add('open');document.body.style.overflow='hidden';}
+function closeMob(){document.getElementById('mob').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMob();});
 var cur=0,slides=document.querySelectorAll('.cs'),track=document.getElementById('ct'),dotsEl=document.getElementById('dots');
 slides.forEach(function(_,i){var d=document.createElement('button');d.className='cdot'+(i===0?' active':'');d.onclick=function(){goTo(i)};dotsEl.appendChild(d);});
 function goTo(n){cur=(n+slides.length)%slides.length;track.style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('.cdot').forEach(function(d,i){d.classList.toggle('active',i===cur)});}
