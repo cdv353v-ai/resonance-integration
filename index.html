@@ -163,16 +163,23 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "@context": "https://schema.org",
 "@graph": [
 {
+"@type": "WebSite",
+"@id": "https://resonanceintegration.cc/#website",
+"name": "Resonance Integration",
+"url": "https://resonanceintegration.cc/",
+"inLanguage": "ru"
+},
+{
 "@type": "MedicalBusiness",
 "@id": "https://resonanceintegration.cc/#business",
 "name": "Resonance Integration",
 "alternateName": ["Резонансная Интеграция", "Resonance Integration Madeira"],
-"description": "Авторский метод интеграции тела и состояния, выросший из шести лет совместной практики на Мадейре. Сочетает структурную коррекцию (хиропрактика и мануальная работа), энергетическую работу, звуковое сопровождение на 432 Гц и вакуумно-градиентное восстановление в едином протоколе. Языки работы: русский и английский.",
+"description": "Авторский метод интеграции тела и состояния, выросший из шести лет совместной практики на Мадейре. Сочетает структурную коррекцию (хиропрактика и мануальная работа), энергетическую работу, звуковое сопровождение на 432, 528 и 963 Гц и вакуумно-градиентное восстановление в едином протоколе. Языки работы: русский и английский.",
 "url": "https://resonanceintegration.cc/",
 "telephone": "+351919191858",
 "priceRange": "€35–€816",
 "medicalSpecialty": "Chiropractic",
-"knowsAbout": ["Chiropractic","Manual Work","Sound Work","432 Hz Tuning","Vacuum-Gradient Recovery","Energy Work","Holistic Body Recovery","Medical Tourism Madeira"],
+"knowsAbout": ["Chiropractic","Manual Work","Sound Work","432 Hz Tuning","528 Hz Frequency Work","963 Hz Frequency Work","Solfeggio Frequencies","Vacuum-Gradient Recovery","Gradient Vacuum Recovery","Energy Work","Holistic Body Recovery","Medical Tourism Madeira"],
 "address": {"@type": "PostalAddress","streetAddress": "Caminho Lombo dos Barros, 21","addressLocality": "Prazeres","addressRegion": "Madeira","postalCode": "9370-619","addressCountry": "PT"},
 "geo": {"@type": "GeoCoordinates","latitude": 32.7553240083748,"longitude": -17.20477311540471},
 "founder": [{"@id": "https://resonanceintegration.cc/#mark"},{"@id": "https://resonanceintegration.cc/#olga"}],
@@ -188,7 +195,7 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "jobTitle": "Chiropractor",
 "description": "Хиропрактор с более чем 30-летним стажем клинической практики. Специализация: коррекция биомеханики, работа с триггерными точками, традиционные китайские и центрально-азиатские мануальные техники. Со-основатель метода Резонансной Интеграции на Мадейре.",
 "knowsLanguage": ["en", "ru"],
-"knowsAbout": ["Chiropractic","Manual Work","Biomechanics","Trigger Point Work","Traditional Chinese Medicine","Vacuum-Gradient Recovery","Musculoskeletal Disorders"],
+"knowsAbout": ["Chiropractic","Manual Work","Biomechanics","Trigger Point Work","Traditional Chinese Medicine","Vacuum-Gradient Recovery","Gradient Vacuum Recovery","528 Hz Frequency Work","963 Hz Frequency Work","Solfeggio Frequencies","Musculoskeletal Disorders"],
 "worksFor": {"@id": "https://resonanceintegration.cc/#business"}
 },
 {
@@ -200,6 +207,21 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "description": "Практик энергетической работы и архитектор пространства Резонансной Интеграции. Считывает внутреннее состояние человека и создаёт условия, в которых тело возвращается к своей частоте. Со-основатель метода.",
 "knowsLanguage": ["en", "ru"],
 "worksFor": {"@id": "https://resonanceintegration.cc/#business"}
+},
+{
+"@type": "ItemList",
+"@id": "https://resonanceintegration.cc/articles/#list",
+"name": "Статьи · Резонансная Интеграция",
+"itemListOrder": "https://schema.org/ItemListOrderDescending",
+"numberOfItems": 6,
+"itemListElement": [
+{"@type": "ListItem","position": 1,"name": "Тело помнит, что такое звук","url": "https://resonanceintegration.cc/articles/the-body-remembers-sound/"},
+{"@type": "ListItem","position": 2,"name": "Испортил отпуск. Боль в теле на Мадейре","url": "https://resonanceintegration.cc/articles/holiday-pain-recovery-madeira/"},
+{"@type": "ListItem","position": 3,"name": "Вакуумная стимуляция. То, что обычно упускают","url": "https://resonanceintegration.cc/articles/vacuum-stimulation-what-is-missed/"},
+{"@type": "ListItem","position": 4,"name": "Паническая атака. Случай из практики","url": "https://resonanceintegration.cc/articles/panic-attack-case-from-practice/"},
+{"@type": "ListItem","position": 5,"name": "Резонансная Интеграция — что это на самом деле","url": "https://resonanceintegration.cc/articles/what-is-resonance-integration/"},
+{"@type": "ListItem","position": 6,"name": "Осознанность — это признание своей силы","url": "https://resonanceintegration.cc/articles/awareness-is-recognizing-your-strength/"}
+]
 },
 {
 "@type": "Service",
@@ -306,9 +328,52 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
 "reviewBody": "Doctor Mark is a unique specialist with comprehensive vision. Helped me many times, every time with great success. I no longer have pain in my knees or lower back.",
 "publisher": {"@type": "Organization", "name": "Google Maps"}
+},
+{
+"@type": "FAQPage",
+"@id": "https://resonanceintegration.cc/#faq",
+"inLanguage": "ru",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Где остановиться рядом с вами?",
+"acceptedAnswer": {"@type": "Answer","text": "Ближайшие варианты аренды — в Калете и Жардин-ду-Мар, 5–10 минут на машине. Есть небольшие гостиницы и апартаменты с видом на океан. Мы можем подсказать конкретные варианты после бронирования."}
+},
+{
+"@type": "Question",
+"name": "Нужна ли машина?",
+"acceptedAnswer": {"@type": "Answer","text": "Да. Празереш находится на западном побережье острова. Общественный транспорт здесь редкий. Машина — единственный удобный способ добраться и свободно перемещаться по острову."}
+},
+{
+"@type": "Question",
+"name": "Как добраться до Мадейры?",
+"acceptedAnswer": {"@type": "Answer","text": "Прямые рейсы из большинства крупных европейских городов. Аэропорт находится в Фуншале, оттуда до Прасереша около часа на машине по скоростной дороге. Для большинства гостей перелёт — наиболее удобный вариант."}
+},
+{
+"@type": "Question",
+"name": "Когда лучше приезжать?",
+"acceptedAnswer": {"@type": "Answer","text": "Мадейра хороша круглый год. Средняя температура 18–24 °C, нет сезона с экстремальной жарой или холодом. Для программы восстановления весна и осень — наиболее спокойное время."}
+},
+{
+"@type": "Question",
+"name": "Нужна ли виза?",
+"acceptedAnswer": {"@type": "Answer","text": "Португалия входит в Шенгенскую зону. Граждане России и других стран СНГ въезжают по шенгенской визе. Граждане ЕС, Великобритании и большинства англоязычных стран — без визы до 90 дней."}
+},
+{
+"@type": "Question",
+"name": "На каких языках вы работаете?",
+"acceptedAnswer": {"@type": "Answer","text": "Русский и английский. За последние три года практика идёт почти исключительно с русско- и англоязычными клиентами."}
+},
+{
+"@type": "Question",
+"name": "За сколько времени бронировать?",
+"acceptedAnswer": {"@type": "Answer","text": "Для программы из 4 сессий — минимум за две недели. Даты резервируются после предоплаты. Для первичного приёма — за 3–5 дней. Срочные случаи рассматриваем индивидуально."}
 }
 ]
 }
+]
+}
+</script>
 </script>
 </head>
 <body>
