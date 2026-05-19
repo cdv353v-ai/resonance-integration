@@ -149,6 +149,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:fl
 .en-num{font-size:44px;font-weight:300;color:var(--gold);opacity:.25;line-height:1;margin-bottom:12px}
 .et{font-size:18px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:8px}
 .ed{font-size:16px;font-weight:300;line-height:1.7;color:var(--muted);letter-spacing:.02em}
+.faq-s{display:grid;gap:2px;margin-top:40px}
+.faq-i{background:var(--d3);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;cursor:pointer;transition:background .25s;gap:16px}
+.faq-q:hover{background:var(--mid)}
+.faq-qt{font-size:20px;font-weight:400;letter-spacing:.04em;color:var(--white);text-transform:uppercase}
+.faq-ic{font-size:24px;color:var(--gold);transition:transform .3s;flex-shrink:0;font-weight:300;line-height:1}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a.open{max-height:400px}
+.faq-at{padding:16px 28px 24px;font-size:18px;font-weight:300;line-height:1.8;color:var(--text);letter-spacing:.02em;border-top:1px solid var(--mid)}
+.faq-i.open .faq-ic{transform:rotate(45deg)}
 footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;text-align:center}
 .fb{font-size:22px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:6px}
 .fl{font-size:13px;font-weight:300;color:var(--muted);letter-spacing:.1em;margin-bottom:24px}
@@ -386,6 +396,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="nl">
 <a href="#method" class="na">Метод</a>
 <a href="#formats" class="na">Форматы</a>
+<a href="#faq" class="na">Вопросы</a>
 <a href="#contact" class="na">Контакт</a>
 <a href="/partners/" class="na">Партнёрство</a>
 <a href="/en/" class="lb" hreflang="en" rel="alternate">EN</a>
@@ -396,6 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button class="mob-x" onclick="closeMob()">×</button>
 <a href="/#method" class="mob-a" onclick="closeMob()">Метод</a>
 <a href="/#formats" class="mob-a" onclick="closeMob()">Форматы</a>
+<a href="/#faq" class="mob-a" onclick="closeMob()">Вопросы</a>
 <a href="/#contact" class="mob-a" onclick="closeMob()">Контакт</a>
 <a href="/partners/" class="mob-a" onclick="closeMob()">Партнёрство</a>
 <a href="/en/" class="lb" onclick="closeMob()">EN</a>
@@ -648,6 +660,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </section>
 
+<div class="rule"></div>
+
+<section class="s sbg" id="faq">
+<div class="si">
+<span class="lbl">Вопросы о визите</span>
+<h2 class="ttl">Часто <em>спрашивают</em></h2>
+<div class="faq-s">
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Где остановиться рядом с вами?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Ближайшие варианты аренды — в Калете и Жардин-ду-Мар, 5–10 минут на машине. Есть небольшие гостиницы и апартаменты с видом на океан. Мы можем подсказать конкретные варианты после бронирования.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Нужна ли машина?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Да. Празереш находится на западном побережье острова. Общественный транспорт здесь редкий. Машина — единственный удобный способ добраться и свободно перемещаться по острову.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Как добраться до Мадейры?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Прямые рейсы из большинства крупных европейских городов. Аэропорт находится в Фуншале, оттуда до Празереша около часа на машине по скоростной дороге.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Когда лучше приезжать?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Мадейра хороша круглый год. Средняя температура 18–24 °C, нет сезона с экстремальной жарой или холодом. Для программы восстановления весна и осень — наиболее спокойное время.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Нужна ли виза?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Португалия входит в Шенгенскую зону. Граждане России и других стран СНГ въезжают по шенгенской визе. Граждане ЕС, Великобритании и большинства англоязычных стран — без визы до 90 дней.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">На каких языках вы работаете?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Русский и английский. За последние три года практика идёт почти исключительно с русско- и англоязычными клиентами.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">За сколько времени бронировать?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Для программы из 4 сессий — минимум за две недели. Даты резервируются после предоплаты. Для первичного приёма — за 3–5 дней. Срочные случаи рассматриваем индивидуально.</div></div>
+</div>
+
+</div>
+</div>
+</section>
+
 <footer>
 <div class="fb">Resonance Integration</div>
 <div class="fl">Caminho Lombo dos Barros, 21 · Празереш · Мадейра · Португалия</div>
@@ -664,6 +723,16 @@ slides.forEach(function(_,i){var d=document.createElement('button');d.className=
 function goTo(n){cur=(n+slides.length)%slides.length;track.style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('.cdot').forEach(function(d,i){d.classList.toggle('active',i===cur)});}
 function slide(dir){goTo(cur+dir)}
 setInterval(function(){slide(1)},6000);
+
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=q.closest('.faq-i');
+    var ans=item.querySelector('.faq-a');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-i').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-a').classList.remove('open');});
+    if(!isOpen){item.classList.add('open');ans.classList.add('open');}
+  });
+});
 
 document.addEventListener('click',function(e){
 var a=e.target.closest('a');
