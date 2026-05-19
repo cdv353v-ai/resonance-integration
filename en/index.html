@@ -160,16 +160,23 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "@context": "https://schema.org",
 "@graph": [
 {
+"@type": "WebSite",
+"@id": "https://resonanceintegration.cc/#website",
+"name": "Resonance Integration",
+"url": "https://resonanceintegration.cc/",
+"inLanguage": "en"
+},
+{
 "@type": "MedicalBusiness",
 "@id": "https://resonanceintegration.cc/#business",
 "name": "Resonance Integration",
 "alternateName": ["Резонансная Интеграция", "Resonance Integration Madeira"],
-"description": "An original method of body and state integration, grown from six years of joint practice in Madeira. Combines structural correction (chiropractic and manual work), energy work, sound accompaniment at 432 Hz and gradient vacuum recovery in a single protocol. Working languages: Russian and English.",
+"description": "An original method of body and state integration, grown from six years of joint practice in Madeira. Combines structural correction (chiropractic and manual work), energy work, sound accompaniment at 432, 528 and 963 Hz and gradient vacuum recovery in a single protocol. Working languages: Russian and English.",
 "url": "https://resonanceintegration.cc/en/",
 "telephone": "+351919191858",
 "priceRange": "€35–€816",
 "medicalSpecialty": "Chiropractic",
-"knowsAbout": ["Chiropractic","Manual Work","Sound Work","432 Hz Tuning","Vacuum-Gradient Recovery","Energy Work","Holistic Body Recovery","Medical Tourism Madeira"],
+"knowsAbout": ["Chiropractic","Manual Work","Sound Work","432 Hz Tuning","528 Hz Frequency Work","963 Hz Frequency Work","Solfeggio Frequencies","Vacuum-Gradient Recovery","Gradient Vacuum Recovery","Energy Work","Holistic Body Recovery","Medical Tourism Madeira"],
 "address": {"@type": "PostalAddress","streetAddress": "Caminho Lombo dos Barros, 21","addressLocality": "Prazeres","addressRegion": "Madeira","postalCode": "9370-619","addressCountry": "PT"},
 "geo": {"@type": "GeoCoordinates","latitude": 32.7553240083748,"longitude": -17.20477311540471},
 "founder": [{"@id": "https://resonanceintegration.cc/#mark"},{"@id": "https://resonanceintegration.cc/#olga"}],
@@ -185,7 +192,7 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "jobTitle": "Chiropractor",
 "description": "Chiropractor with over 30 years of clinical practice. Specialisation: biomechanical correction, trigger point work, traditional Chinese and Central Asian manual techniques. Co-founder of the Resonance Integration method in Madeira.",
 "knowsLanguage": ["en", "ru"],
-"knowsAbout": ["Chiropractic","Manual Work","Biomechanics","Trigger Point Work","Traditional Chinese Medicine","Vacuum-Gradient Recovery","Musculoskeletal Disorders"],
+"knowsAbout": ["Chiropractic","Manual Work","Biomechanics","Trigger Point Work","Traditional Chinese Medicine","Vacuum-Gradient Recovery","Gradient Vacuum Recovery","528 Hz Frequency Work","963 Hz Frequency Work","Solfeggio Frequencies","Musculoskeletal Disorders"],
 "worksFor": {"@id": "https://resonanceintegration.cc/#business"}
 },
 {
@@ -197,6 +204,21 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "description": "Energy work practitioner and space architect of Resonance Integration. Senses the inner state of a person and creates conditions in which the body returns to its own frequency. Co-founder of the method.",
 "knowsLanguage": ["en", "ru"],
 "worksFor": {"@id": "https://resonanceintegration.cc/#business"}
+},
+{
+"@type": "ItemList",
+"@id": "https://resonanceintegration.cc/en/articles/#list",
+"name": "Articles · Resonance Integration",
+"itemListOrder": "https://schema.org/ItemListOrderDescending",
+"numberOfItems": 6,
+"itemListElement": [
+{"@type": "ListItem","position": 1,"name": "The Body Remembers What Sound Is","url": "https://resonanceintegration.cc/en/articles/the-body-remembers-sound/"},
+{"@type": "ListItem","position": 2,"name": "Ruined the Holiday. Body Pain in Madeira","url": "https://resonanceintegration.cc/en/articles/holiday-pain-recovery-madeira/"},
+{"@type": "ListItem","position": 3,"name": "Vacuum Stimulation. What Is Usually Missed","url": "https://resonanceintegration.cc/en/articles/vacuum-stimulation-what-is-missed/"},
+{"@type": "ListItem","position": 4,"name": "Panic Attack. A Case from Practice","url": "https://resonanceintegration.cc/en/articles/panic-attack-case-from-practice/"},
+{"@type": "ListItem","position": 5,"name": "Resonance Integration — What It Actually Is","url": "https://resonanceintegration.cc/en/articles/what-is-resonance-integration/"},
+{"@type": "ListItem","position": 6,"name": "Awareness Is Recognising Your Own Strength","url": "https://resonanceintegration.cc/en/articles/awareness-is-recognizing-your-strength/"}
+]
 },
 {
 "@type": "Service",
@@ -295,6 +317,48 @@ footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;
 "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
 "reviewBody": "Doctor Mark is a unique specialist with comprehensive vision. Helped me many times, every time with great success. I no longer have pain in my knees or lower back.",
 "publisher": {"@type": "Organization", "name": "Google Maps"}
+},
+{
+"@type": "FAQPage",
+"@id": "https://resonanceintegration.cc/en/#faq",
+"inLanguage": "en",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Where to stay near you?",
+"acceptedAnswer": {"@type": "Answer","text": "The closest accommodation options are in Calheta and Jardim do Mar, 5–10 minutes by car. There are small hotels and apartments with ocean views. We can suggest specific options after booking."}
+},
+{
+"@type": "Question",
+"name": "Do I need a car?",
+"acceptedAnswer": {"@type": "Answer","text": "Yes. Prazeres is on the western coast of the island. Public transport here is infrequent. A car is the only convenient way to get here and move around the island freely."}
+},
+{
+"@type": "Question",
+"name": "How do I get to Madeira?",
+"acceptedAnswer": {"@type": "Answer","text": "Direct flights from most major European cities. The airport is in Funchal, from there it is about an hour by car to Prazeres along the expressway. For most guests, flying is the most convenient option."}
+},
+{
+"@type": "Question",
+"name": "When is the best time to visit?",
+"acceptedAnswer": {"@type": "Answer","text": "Madeira is beautiful year-round. Average temperature 18–24°C, with no season of extreme heat or cold. For a recovery programme, spring and autumn are the quietest times."}
+},
+{
+"@type": "Question",
+"name": "Do I need a visa?",
+"acceptedAnswer": {"@type": "Answer","text": "Portugal is part of the Schengen Area. Citizens of EU countries, the UK and most English-speaking countries enter without a visa for up to 90 days. Citizens of Russia and other CIS countries enter on a Schengen visa."}
+},
+{
+"@type": "Question",
+"name": "What languages do you work in?",
+"acceptedAnswer": {"@type": "Answer","text": "Russian and English. Over the last three years our practice has been almost exclusively with Russian- and English-speaking clients."}
+},
+{
+"@type": "Question",
+"name": "How far in advance should I book?",
+"acceptedAnswer": {"@type": "Answer","text": "For a programme of 4 sessions — at least two weeks in advance. Dates are reserved after advance payment. For an initial session — 3–5 days ahead. Urgent cases are considered individually."}
+}
+]
 }
 ]
 }
