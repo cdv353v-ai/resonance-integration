@@ -146,6 +146,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:fl
 .en-num{font-size:44px;font-weight:300;color:var(--gold);opacity:.25;line-height:1;margin-bottom:12px}
 .et{font-size:18px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:8px}
 .ed{font-size:16px;font-weight:300;line-height:1.7;color:var(--muted);letter-spacing:.02em}
+.faq-s{display:grid;gap:2px;margin-top:40px}
+.faq-i{background:var(--d3);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;cursor:pointer;transition:background .25s;gap:16px}
+.faq-q:hover{background:var(--mid)}
+.faq-qt{font-size:20px;font-weight:400;letter-spacing:.04em;color:var(--white);text-transform:uppercase}
+.faq-ic{font-size:24px;color:var(--gold);transition:transform .3s;flex-shrink:0;font-weight:300;line-height:1}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a.open{max-height:400px}
+.faq-at{padding:16px 28px 24px;font-size:18px;font-weight:300;line-height:1.8;color:var(--text);letter-spacing:.02em;border-top:1px solid var(--mid)}
+.faq-i.open .faq-ic{transform:rotate(45deg)}
 footer{background:var(--dark);border-top:1px solid var(--mid);padding:52px 24px;text-align:center}
 .fb{font-size:22px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:6px}
 .fl{font-size:13px;font-weight:300;color:var(--muted);letter-spacing:.1em;margin-bottom:24px}
@@ -375,6 +385,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="nl">
 <a href="#method" class="na">Method</a>
 <a href="#formats" class="na">Formats</a>
+<a href="#faq" class="na">FAQ</a>
 <a href="#contact" class="na">Contact</a>
 <a href="/en/partners/" class="na">Partnership</a>
 <a href="/" class="lb" hreflang="ru" rel="alternate">RU</a>
@@ -385,6 +396,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button class="mob-x" onclick="closeMob()">×</button>
 <a href="/en/#method" class="mob-a" onclick="closeMob()">Method</a>
 <a href="/en/#formats" class="mob-a" onclick="closeMob()">Formats</a>
+<a href="/en/#faq" class="mob-a" onclick="closeMob()">FAQ</a>
 <a href="/en/#contact" class="mob-a" onclick="closeMob()">Contact</a>
 <a href="/en/partners/" class="mob-a" onclick="closeMob()">Partnership</a>
 <a href="/" class="lb" onclick="closeMob()">RU</a>
@@ -637,6 +649,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </section>
 
+<div class="rule"></div>
+
+<section class="s sbg" id="faq">
+<div class="si">
+<span class="lbl">Questions about your visit</span>
+<h2 class="ttl">Frequently <em>asked</em></h2>
+<div class="faq-s">
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Where to stay near you?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">The closest accommodation options are in Calheta and Jardim do Mar, 5–10 minutes by car. There are small hotels and apartments with ocean views. We can suggest specific options after booking.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Do I need a car?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Yes. Prazeres is on the western coast of the island. Public transport here is infrequent. A car is the only convenient way to get here and move around the island freely.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">How do I get to Madeira?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Direct flights from most major European cities. The airport is in Funchal, from there it is about an hour by car to Prazeres along the expressway. For most guests, flying is the most convenient option.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">When is the best time to visit?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Madeira is beautiful year-round. Average temperature 18–24°C, with no season of extreme heat or cold. For a recovery programme, spring and autumn are the quietest times.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">Do I need a visa?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Portugal is part of the Schengen Area. Citizens of EU countries, the UK and most English-speaking countries enter without a visa for up to 90 days. Citizens of Russia and other CIS countries enter on a Schengen visa.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">What languages do you work in?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">Russian and English. Over the last three years our practice has been almost exclusively with Russian- and English-speaking clients.</div></div>
+</div>
+
+<div class="faq-i">
+<div class="faq-q"><span class="faq-qt">How far in advance should I book?</span><span class="faq-ic">+</span></div>
+<div class="faq-a"><div class="faq-at">For a programme of 4 sessions — at least two weeks in advance. Dates are reserved after advance payment. For an initial session — 3–5 days ahead. Urgent cases are considered individually.</div></div>
+</div>
+
+</div>
+</div>
+</section>
+
 <footer>
 <div class="fb">Resonance Integration</div>
 <div class="fl">Caminho Lombo dos Barros, 21 · Prazeres · Madeira · Portugal</div>
@@ -653,6 +712,16 @@ slides.forEach(function(_,i){var d=document.createElement('button');d.className=
 function goTo(n){cur=(n+slides.length)%slides.length;track.style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('.cdot').forEach(function(d,i){d.classList.toggle('active',i===cur)});}
 function slide(dir){goTo(cur+dir)}
 setInterval(function(){slide(1)},6000);
+
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=q.closest('.faq-i');
+    var ans=item.querySelector('.faq-a');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-i').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-a').classList.remove('open');});
+    if(!isOpen){item.classList.add('open');ans.classList.add('open');}
+  });
+});
 
 document.addEventListener('click',function(e){
 var a=e.target.closest('a');
