@@ -24,7 +24,7 @@
     <loc>https://resonanceintegration.cc/articles/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/"/>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,9 +33,27 @@
     <loc>https://resonanceintegration.cc/en/articles/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/"/>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://resonanceintegration.cc/articles/chiropractor-madeira/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/chiropractor-madeira/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/chiropractor-madeira/"/>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://resonanceintegration.cc/en/articles/chiropractor-madeira/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/chiropractor-madeira/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/chiropractor-madeira/"/>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
