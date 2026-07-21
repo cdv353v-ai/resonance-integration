@@ -24,7 +24,7 @@
     <loc>https://resonanceintegration.cc/articles/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/"/>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,9 +33,27 @@
     <loc>https://resonanceintegration.cc/en/articles/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/"/>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://resonanceintegration.cc/articles/nervous-system-new-wellness/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/nervous-system-new-wellness/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/nervous-system-new-wellness/"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://resonanceintegration.cc/en/articles/nervous-system-new-wellness/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/nervous-system-new-wellness/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/nervous-system-new-wellness/"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
