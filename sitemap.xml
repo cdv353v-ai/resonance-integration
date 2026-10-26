@@ -21,10 +21,28 @@
   </url>
 
   <url>
+    <loc>https://resonanceintegration.cc/tourism/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/tourism/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/tourism/"/>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://resonanceintegration.cc/en/tourism/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/tourism/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/tourism/"/>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://resonanceintegration.cc/articles/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/"/>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,25 +51,25 @@
     <loc>https://resonanceintegration.cc/en/articles/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/"/>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://resonanceintegration.cc/articles/biohacking-without-gadgets/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/biohacking-without-gadgets/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/biohacking-without-gadgets/"/>
-    <lastmod>2026-09-11</lastmod>
+    <loc>https://resonanceintegration.cc/articles/madeira-winter-health/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/madeira-winter-health/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/madeira-winter-health/"/>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://resonanceintegration.cc/en/articles/biohacking-without-gadgets/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/biohacking-without-gadgets/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/biohacking-without-gadgets/"/>
-    <lastmod>2026-09-11</lastmod>
+    <loc>https://resonanceintegration.cc/en/articles/madeira-winter-health/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://resonanceintegration.cc/articles/madeira-winter-health/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://resonanceintegration.cc/en/articles/madeira-winter-health/"/>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
